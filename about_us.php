@@ -45,9 +45,6 @@
                 <div class="container">
                     <div class="about-title wow zoomIn"><h1>SUPER TECH</h1></div>
                     <h3><b>Largest online</b> electronics company in Bangladesh.</h3>
-                    <div class="btn1">
-                        <button>LEARN MORE <i class="fas fa-angle-right"></i></button>
-                    </div>
                 </div>
             </section>
         </section>
@@ -66,7 +63,7 @@
                     </div>
                     <div class="col-md-5">
                         <div class="btn2">
-                            <button>CONTACT US <i class="fas fa-angle-right"></i> </button>
+                            <a href="contact.php"><button>CONTACT US <i class="fas fa-angle-right"></i> </button></a>
                         </div>
                     </div>
                 </div>

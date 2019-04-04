@@ -47,13 +47,13 @@
             <div class="info-content">
                 <div class="col-40 col-100 wow slideInLeft">
                     <div class="contact-info">
-                        <h5>our Address</h5>
-                        <p>House #jani na, Boddho Mondhir Dhaka 1214</p>
+                        <h5>Our Address</h5>
+                        <p>House #1, Road #12, Bashabo, Dhaka-1214</p>
                         <h5>Call Us</h5>
-                        <p>01996846517
-                            <br>01534312346</p>
+                        <p>+880 199 6846517
+                            <br>+880 153 4312346</p>
                         <h5>Email Us</h5>
-                        <p class="m-0">arif.ishan05@gmail.com</p>
+                        <p class="m-0">help@supertech.com</p>
                     </div>
                 </div>
                 <div class="col-60 col-100 wow slideInRight">

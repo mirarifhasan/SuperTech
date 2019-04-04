@@ -8,9 +8,10 @@
     <!-- Link -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    
     <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/animate.min.css"> </head>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="style.css"> </head>
 
 <body>
     <!-- header-area -->
@@ -492,8 +493,8 @@
        <div class="promo-overlay">
         <div class="container">
             <div class="promo-content wow zoomIn">
-                <h2>Lets ger started now. <span><b>It's free!</b></span></h2>
-                <p>30 day free trial. Free plan allows up to 2 projects. Pay if you need more. Cancel anytime. No catches.</p>
+                <h2>Lets get starts now. <span><b>It's easy!</b></span></h2>
+                <p>Hassle free online shoping site in Bangladesh.</p>
                 
             </div>
         </div>
