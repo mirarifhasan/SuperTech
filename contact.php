@@ -61,7 +61,7 @@
                         <input class="form-control" type="text" placeholder="Name">
                         <input class="form-control" type="email" placeholder="Email">
                         <input class="form-control" type="text" placeholder="Subject">
-                        <textarea class="form-control" name="" id="" cols="10" rows="5" placeholder="message"></textarea>
+                        <textarea class="form-control" name="" id="" cols="10" rows="5" placeholder="Message"></textarea>
                         <input class="mb-0" type="submit" value="send message"> </form>
                 </div>
             </div>
