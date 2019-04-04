@@ -34,7 +34,7 @@
       .menu ul li {}
       
       .menu ul li a {
-          padding: 10px 20px;
+          padding: 10px 10px;
           text-decoration: none;
           font-size: 18px;
           color: #E74C3C;
@@ -47,7 +47,26 @@
       
       .menu ul li a:hover {
           color: #DC2913;
+          
       }
+      .menu ul li a button{
+          background: transparent;
+           font-size: 18px;
+          color: #E74C3C;
+            -webkit-transition: .5s;
+          -moz-transition: .5s;
+          transition: .5s;
+          text-transform: capitalize;
+          font-family: tahoma;
+          border: 2px solid #E74C3C;
+          
+}
+      .menu ul li a button:hover{
+          background-color: #E74C3C;
+          color: #fff;
+         
+         
+}
       
       .menu ul li i {}
       
@@ -200,10 +219,21 @@
           color: #fff;
       }
       
-      .product-area .works-img .product-overlay button {
+      .product-area .works-img .product-overlay .add button {
           position: absolute;
           bottom: 40px;
           left: 45px;
+          color: #fff;
+          background-color: #202020;
+          border: none;
+          font-size: 12px;
+          padding: 5px 10px;
+          cursor: pointer;
+      }
+      .product-area .works-img .product-overlay .details button {
+          position: absolute;
+          bottom: 40px;
+          left: 200px;
           color: #fff;
           background-color: #202020;
           border: none;

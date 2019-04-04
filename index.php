@@ -25,12 +25,14 @@
                     <div class="col-md-8">
                         <div class="menu-area">
                             <div class="menu">
-                                <ul class="nav">
+                                <ul class="nav justify-content-end">
                                     <li><a href="index.php"><b>Home</b></a></li>
                                     <li><a href="about_us.php"><b>About Us</b></a></li>
+                                    <li><a href="product.php"><b>Product</b></a></li>
                                     <li><a href="#"><b>My Profile</b></a></li>
                                     <li><a href="contact.php"><b>Contact</b></a></li>
-                                    <li><a href="log_in.php"><b>Login</b></a></li>
+                                    <li><a href="sign_up.php"><button><b>Sign Up</b></button></a></li>
+                                    <li><a href="log_in.php"><button><b>Login</b></button></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -118,7 +120,8 @@
     </div>
     <!-- product-area -->
     <section class="product-area">
-        <h2>Our Product</h2>
+      <div class="container">
+            <h2>Our Product</h2>
         <div class="button-group filter-button-group">
             <button data-filter="*" class="active">All</button>
             <button data-filter=".laptop">Laptop</button>
@@ -128,13 +131,15 @@
             <button data-filter=".headphone">Headphone</button>
             <button data-filter=".others">Others</button>
         </div>
+      </div>
         <div class="row grid no-gutters">
             <div class="col-md-3 grid-item laptop animation wow zoomIn">
                 <div class="works-img"> <img src="image/laptop%201.jpg" class="img-fluid" alt="pic">
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -143,7 +148,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -152,7 +158,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                      <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -161,7 +168,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -170,7 +178,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                        <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -179,7 +188,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -188,7 +198,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -197,7 +208,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -206,7 +218,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -215,7 +228,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -224,7 +238,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                      <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -233,7 +248,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -242,7 +258,9 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
+                        
                     </div>
                 </div>
             </div>
@@ -251,7 +269,9 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
+                        
                     </div>
                 </div>
             </div>
@@ -260,7 +280,9 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                      <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
+                        
                     </div>
                 </div>
             </div>
@@ -269,7 +291,9 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                      <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
+                        
                     </div>
                 </div>
             </div>
@@ -278,7 +302,9 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
+                        
                     </div>
                 </div>
             </div>
@@ -287,7 +313,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -296,7 +323,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -305,7 +333,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -314,7 +343,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -323,7 +353,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -332,7 +363,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -341,7 +373,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -350,7 +383,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -359,7 +393,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -368,7 +403,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -377,7 +413,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -386,7 +423,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -395,7 +433,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -404,7 +443,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                        <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -413,7 +453,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -422,7 +463,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -431,7 +473,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                      <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -440,7 +483,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -449,7 +493,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                      <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -458,7 +503,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
@@ -467,7 +513,8 @@
                     <div class="product-overlay">
                         <h5>Product Name</h5>
                         <h6>Price: Amount</h6>
-                        <button>Add to chart</button>
+                       <div class="add"> <button>Add to chart</button></div>
+                       <div class="details"> <button>Details</button></div>
                     </div>
                 </div>
             </div>
