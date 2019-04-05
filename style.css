@@ -34,7 +34,7 @@
       .menu ul li {}
       
       .menu ul li a {
-          padding: 10px 10px;
+          padding: 10px 15px;
           text-decoration: none;
           font-size: 18px;
           color: #E74C3C;
@@ -203,7 +203,7 @@
       bottom: 40px;
       left: 45px;
       color: #fff;
-      background-color: #202020;
+      background-color: #999999;
       border: none;
       font-size: 12px;
       padding: 5px 10px;
@@ -214,7 +214,7 @@
       bottom: 40px;
       left: 200px;
       color: #fff;
-      background-color: #202020;
+      background-color: #999999;
       border: none;
       font-size: 12px;
       padding: 5px 10px;
@@ -388,6 +388,7 @@
       position: absolute;
       top: 40%;
       left: 40%;
+      color: #E74C3C;
   }
   .footer-area .icon-area ul li:hover i {
       color: #fff;
@@ -656,7 +657,7 @@
   .loginbox {
       width: 320px;
       height: 420px;
-      background: #000;
+      background: #fff;
       color: #fff;
       top: 50%;
       left: 50%;
@@ -681,11 +682,13 @@
       font-size: 22px;
       text-align: center;
       font-weight: bold;
+      color: #000;
   }
   .loginbox p {
       margin: 0;
       padding: 0;
       font-weight: bold;
+       color: #000;
   }
   .loginbox input {
       width: 100%;
@@ -694,11 +697,11 @@
   .loginbox input[type="text"],
   input[type="password"] {
       border: none;
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid #999999;
       background: transparent;
       outline: none;
       height: 40px;
-      color: #fff;
+      color: #000;
       font-size: 16px;
   }
   .loginbox input[type="submit"] {
@@ -725,3 +728,192 @@
   .loginbox a:hover {
       color: #E74C3C;
   }
+
+  /* signup-area */
+
+
+.signup-area {
+      margin: 0;
+      padding: 0;
+      background-image: url(image/login-background.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      font-family: sans-serif;
+      height: 600px;
+      width: 100%;
+  }
+ .signupbox {
+      width: 350px;
+      height: 480px;
+      background: #fff;
+      color: #fff;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      box-sizing: border-box;
+      padding: 15px;
+      margin-top: 80px;
+  }
+.signupbox img {
+      position: absolute;
+      top: -50px;
+      left: calc(50% - 50px);
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+  }
+ .signupbox h1 {
+      margin: 0;
+      margin-top: 50px;
+      padding: 0 0 20px;
+      font-size: 22px;
+      text-align: center;
+      font-weight: bold;
+      color: #000;
+  }
+
+  .signupbox input {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+ .signupbox input[type="text"],
+  input[type="password"], input[type="number"] {
+      border: none;
+      border-bottom: 1px solid #999999;
+      background: transparent;
+      outline: none;
+      height: 40px;
+      color: #000;
+      font-size: 16px;
+  }
+  .signupbox input[type="submit"] {
+      border: none;
+      outline: none;
+      height: 40px;
+      background: #E74C3C;
+      color: #fff;
+      font-size: 18px;
+      border-radius: 20px;
+  }
+ .signupbox input[type="submit"]:hover {
+      cursor: pointer;
+      background: #999999;
+      color: #000;
+  }
+  
+/* our product-area */
+
+.our-products{
+     background: #f4f5f9;
+   padding-bottom: 20px;
+}
+.section-title{
+    padding-top: 50px;
+}
+.section-title h2{
+      text-align: center;
+      background-color: #202020;
+      position: relative;
+      padding: 8px 12px;
+      padding-left: 20px;
+      margin-right: 10%;
+      color: #fff;
+      margin-bottom: 30px;
+      display: inline-block;
+     font-family: tahoma;
+}
+.section-title h2::before
+{
+      content: '';
+      width: 10px;
+      height: 35px;
+      background-color: #E74C3C;
+      position: absolute;
+      left: 0;
+      top: 54%;
+      transform: translateY(-50%);
+}
+.product-image{
+     margin: 20px 0;
+    height: 480px;
+   
+}
+.product-image img{
+   height: 480px;
+}
+.product-details{
+   margin: 20px 0;
+    background-color: #fff;
+   height: 480px;
+    
+}
+.product-details h6{
+    padding: 5px 12px;
+    background-color: #E74C3C;
+    color: #fff;
+    display: inline-block;
+    margin: 20px 30px;
+     font-family: tahoma;
+}
+.product-details h2{
+     margin: 0px 30px;
+     font-family: tahoma;
+}
+.product-details p{
+     margin: 8px 30px;
+    font-size: 15px;
+    font-family: tahoma;
+}
+.product-details h3{
+      margin: 15px 30px;
+    color:  #E74C3C;
+     font-family: tahoma;
+}
+.product-details label{
+     margin: 5px 30px;
+     font-family: tahoma;
+}
+.product-details [type="number"]{
+     margin: 5px -20px;
+    border: 1px solid #000;
+    height: 25px;
+    width: 40px;
+     font-family: tahoma;
+}
+.product-details button{
+    margin-left: 100px;
+    background-color: #E74C3C;
+    color: #fff;
+    border: none;
+    padding: 4px 8px;
+     font-family: tahoma;
+}
+.product-details button:hover{
+    background-color: #999999;
+}
+.product-desc{}
+.product-desc p{
+    font-size: 15px;
+    text-align: justify;
+    padding: 23px 0;
+    
+}
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
