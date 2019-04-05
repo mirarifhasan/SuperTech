@@ -1,3 +1,14 @@
+<?php
+
+$host = 'localhost';
+$user = 'root';
+$password = '';
+$db = 'shoptech';
+
+$link = mysqli_connect($host, $user, $password, $db);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 

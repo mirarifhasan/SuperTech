@@ -45,8 +45,8 @@
         <div class="loginbox"> <img src="image/001.jpg" alt="pic">
             <h1>Login Here</h1>
             <form>
-                <p>Username</p>
-                <input type="text" name="" placeholder="Enter Username">
+                <p>Email</p>
+                <input type="text" name="" placeholder="Enter Email">
                 <p>Password</p>
                 <input type="password" name="" placeholder="Enter Password">
                 <input type="submit" name="" value="Login"> <a href="#">Lost your password?</a> <a href="#">Don't have an account?</a> </form>
