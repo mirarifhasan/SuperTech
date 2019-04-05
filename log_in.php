@@ -1,3 +1,55 @@
+<?php
+
+session_start();
+session_destroy();
+
+$host = 'localhost';
+$user = 'root';
+$password = '';
+$db = 'shoptech';
+$link = mysqli_connect($host, $user, $password, $db);
+
+$email='';
+$password='';
+$error='';
+
+function clean_text($string)
+{
+     $string = trim($string);
+     $string = stripslashes($string);
+     $string = htmlspecialchars($string);
+     return $string;
+}
+
+if(isset($_POST["login"])){
+    
+    if(empty($_POST["email"])){
+        $error .= '<p><label class="text-danger">Please Enter your Email</label></p>';
+    }
+    else{
+        $email = clean_text($_POST["email"]);
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+        {
+            $error .= '<p><label class="text-danger">Invalid email format</label></p>';
+        }
+    }
+    
+    if(empty($_POST["password"])){
+        $error .= '<p><label class="text-danger">Password is required</label></p>';
+    }
+    else{
+        $password = clean_text($_POST["password"]);
+    }
+
+    if($error == '') {
+        $email = '';
+        $password = '';
+        header('Location: index.php');
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,15 +104,16 @@
     <div class="login-area">
         <div class="loginbox"> <img src="image/001.jpg" alt="pic">
             <h1>Login Here</h1>
-            <form>
+            <form method="post">
                 <p>Email</p>
-                <input type="text" name="" placeholder="Enter Email">
+                <input type="text" name="email" placeholder="Enter Email" value="<?php echo $email; ?>">
                 <p>Password</p>
-                <input type="password" name="" placeholder="Enter Password">
-                <input type="submit" name="" value="Login"> <a href="#">Lost your password?</a> <a href="#">Don't have an account?</a> </form>
+                <input type="password" name="password" placeholder="Enter Password" value="<?php echo $password; ?>">
+                <input type="submit" name="login" value="Login"> <a href="#">Lost your password?</a> <a href="#">Don't have an account?</a> </form>
         </div>
     </div>
     <div class="arrow-top"> <img src="image/arrow.png" alt=""> </div>
+    
     <!-- Link -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
