@@ -73,7 +73,9 @@
       .header-bottom {}
       
       .slider {}
-      
+
+    border-radius: 50%;
+}
       .carousel-item {}
       
       .carousel-item img {
