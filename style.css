@@ -1,4 +1,4 @@
-      /* Header Area */
+  /* Header Area */
       
       body {
           margin: 0;
@@ -47,783 +47,681 @@
       
       .menu ul li a:hover {
           color: #DC2913;
-          
       }
-      .menu ul li a button{
+      
+      .menu ul li a button {
           background: transparent;
-           font-size: 18px;
+          font-size: 18px;
           color: #E74C3C;
-            -webkit-transition: .5s;
+          -webkit-transition: .5s;
           -moz-transition: .5s;
           transition: .5s;
           text-transform: capitalize;
           font-family: tahoma;
           border: 2px solid #E74C3C;
-          
-}
-      .menu ul li a button:hover{
+      }
+      
+      .menu ul li a button:hover {
           background-color: #E74C3C;
           color: #fff;
-         
-         
-}
+      }
       
       .menu ul li i {}
       
       .header-bottom {}
       
       .slider {}
-
-    border-radius: 50%;
-}
-      .carousel-item {}
       
-      .carousel-item img {
-          height: 600px;
-      }
-      /* policy-area */
-      
-      .policy-area {
-          padding: 50px 0;
-          background-color: #F5F5F5;
-      }
-      
-      .policy-tag h2 {
-          text-align: center;
-          background-color: #202020;
-          position: relative;
-          padding: 8px 12px;
-          padding-left: 20px;
-          margin-right: 10%;
-          color: #fff;
-          margin-bottom: 30px;
-          display: inline-block;
-      }
-      
-      .policy-tag h2::before {
-          content: '';
-          width: 10px;
-          height: 35px;
-          background-color: #E74C3C;
-          position: absolute;
-          left: 0;
-          top: 54%;
-          transform: translateY(-50%);
-      }
-      
-      .service {
-          display: flex;
-          margin-bottom: 15px;
-          margin-top: 15px;
-      }
-      
-      .policy-icon {
-          width: 20%;
-      }
-      
-      .policy-icon img {
-          margin-top: -10px;
-      }
-      
-      .policy-text {}
-      
-      .policy-text h6 {
-          padding: 0px 20px;
-          font-family: tahoma;
-          font-weight: 800;
-      }
-      
-      .policy-text p {
-          padding: 0px 20px;
-          font-family: Poppins;
-          font-weight: 500;
-          font-size: 14px;
-          letter-spacing: 1px;
-      }
-      /* product-area  */
-      
-      .product-area {}
-      
-      .product-area h2 {
-          text-align: center;
-          background-color: #202020;
-          position: relative;
-          padding: 8px 12px;
-          padding-left: 20px;
-          margin-right: 10%;
-          color: #fff;
-          margin-bottom: 30px;
-          display: inline-block;
-          margin-top: 40px;
-      }
-      
-      .product-area h2::before {
-          content: '';
-          width: 10px;
-          height: 35px;
-          background-color: #E74C3C;
-          position: absolute;
-          left: 0;
-          top: 54%;
-          transform: translateY(-50%);
-      }
-      
-      .product-area .works-img {
-          position: relative;
-          overflow: hidden;
-      }
-      
-      .product-area .works-img img {
-          height: 350px;
-          width: auto;
-      }
-      
-      .product-area .works-img:hover .product-overlay {
-          height: 100%;
-      }
-      
-      .product-area .works-img .product-overlay {
-          position: absolute;
-          bottom: 0px;
-          left: 0;
-          background: rgba(231, 76, 60, .8);
-          width: 100%;
-          height: 0%;
-          transition: .5s;
-          overflow: hidden;
-      }
-      
-      .product-area .works-img .product-overlay h5 {
-          padding-top: 20px;
-          padding-bottom: 0px;
-          margin: 0;
-          position: absolute;
-          bottom: 120px;
-          left: 45px;
-          color: #fff;
-      }
-      
-      .product-area .works-img .product-overlay h5::after {
-          content: '';
-          width: 45px;
-          height: 4px;
-          background-color: #fff;
-          position: absolute;
-          top: -25px;
-          left: 0%;
-      }
-      
-      .product-area .works-img .product-overlay h6 {
-          margin: 0;
-          position: absolute;
-          bottom: 90px;
-          left: 45px;
-          color: #fff;
-      }
-      
-      .product-area .works-img .product-overlay .add button {
-          position: absolute;
-          bottom: 40px;
-          left: 45px;
-          color: #fff;
-          background-color: #202020;
-          border: none;
-          font-size: 12px;
-          padding: 5px 10px;
-          cursor: pointer;
-      }
-      .product-area .works-img .product-overlay .details button {
-          position: absolute;
-          bottom: 40px;
-          left: 200px;
-          color: #fff;
-          background-color: #202020;
-          border: none;
-          font-size: 12px;
-          padding: 5px 10px;
-          cursor: pointer;
-      }
-      
-      .filter-button-group {
-          padding: 10px 0;
-          padding-bottom: 40px;
-      }
-      
-      .filter-button-group button {
-          border: none;
-          background-color: #E74C3C;
-          color: #fff;
-          padding: 10px 20px;
-      }
-      
-      .filter-button-group button:hover {
-          cursor: pointer;
-          background-color: #999999;
-          border-radius: 12px;
-          color: #fff;
-      }
-      
-      .filter-button-group .active {
-          background-color: #141414;
-          color: #fff;
-      }
-      /* review-area */
-      
-      .review-area {
-          background-color: #F5F5F5;
-      }
-      
-      .review-title {}
-      
-      .review-title h2 {
-          text-align: center;
-          background-color: #202020;
-          position: relative;
-          padding: 8px 12px;
-          padding-left: 20px;
-          margin-right: 10%;
-          color: #fff;
-          margin-bottom: 30px;
-          display: inline-block;
-          margin-top: 40px;
-      }
-      
-      .review-title h2::before {
-          content: '';
-          width: 10px;
-          height: 35px;
-          background-color: #E74C3C;
-          position: absolute;
-          left: 0;
-          top: 54%;
-          transform: translateY(-50%);
-      }
-      
-      .review-video {
-          margin-bottom: 40px;
-      }
-
- /* promo-area */
-
-.promo{
-    background: url("image/promo.jpg");
-    background-attachment: fixed;
-    
-    position: relative;
-    height: 400px;
-    width: auto;
-}
-.promo .promo-overlay{
-    background: rgba(232, 75, 57, .2);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    z-index: 2;
-}
-.promo .promo-overlay .promo-content{
-    text-align: center
-}
-.promo .promo-overlay .promo-content h2{
-    text-transform: capitalize;
-    font-weight: 200;
-    color: #fff;
-    letter-spacing: 1px;
-    padding-top: 150px;
-}
-.promo .promo-overlay .promo-content h2 span{
-    font-weight: bold;
-}
-.promo .promo-overlay .promo-content p{
-    margin-bottom: 50px;
-    color: #fff;
-}
-
-      /* footer-area */
-      
-      .footer-area {
-          margin: 0;
-          padding: 0;
-          background-color: #999999;
-          position: relative;
-      }
-      
-      .footer-area .icon-area {
-          margin-top: 50px;
-      }
-      
-      .footer-area .icon-area ul {
-          margin: 0;
-          padding: 0;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-      }
-      
-      .footer-area .icon-area ul li {
-          list-style: none;
-          float: left;
-          margin: 10px;
-          width: 70px;
-          height: 70px;
-          line-height: 100px;
-          text-align: center;
-          background: #fff;
-          border-radius: 50%;
-          position: relative;
-          overflow: hidden;
-          color: #262626;
-          font-size: 50px;
-          z-index: 1;
-          transition: .5s ease-in-out;
-      }
-      
-      .footer-area .icon-area ul li:before {
-          content: '';
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          left: -100%;
-          background: #ccc;
-          z-index: -1;
-          border-radius: 50%;
-          transform: scale(0);
-          transition: .3s ease-in-out
-      }
-      
-      .footer-area .icon-area ul li:after {
-          content: '';
-          width: 50%;
-          height: 100%;
-          position: absolute;
-          right: -100%;
-          top: 0;
-          background: rgba(255, 255, 255, .3);
-          transition: .5s ease-in-out;
-          transition-delay: .3s;
-      }
-      
-      .footer-area .icon-area ul li:hover:before {
-          left: 0;
-          transform: scale(.9);
-      }
-      
-      .footer-area .icon-area ul li:hover:after {
-          right: 0%;
-      }
-      
-      .footer-area .icon-area ul li:nth-child(1):before {
-          background: #3b5999;
-      }
-      
-      .footer-area .icon-area ul li:nth-child(2):before {
-          background: #55acee;
-      }
-      
-      .footer-area .icon-area ul li:nth-child(3):before {
-          background: #0077B5;
-      }
-      
-      .footer-area .icon-area ul li:nth-child(4):before {
-          background: #e4405f;
-      }
-      
-      .footer-area .icon-area ul li i {
-          transition: .3s ease-in-out;
-          font-size: 20px;
-          position: absolute;
-          top: 40%;
-          left: 40%;
-      }
-      
-      .footer-area .icon-area ul li:hover i {
-          color: #fff;
-      }
-      /* arrow-area */
-      
-      .arrow-top {
-          width: 50px;
-          position: fixed;
-          bottom: 5%;
-          right: 5%;
-          display: none;
-      }
-      
-      .arrow-top img {
-          width: 100%;
-      }
-      /* about-area */
-      
-      .about-area {}
-      
-      section.about-area {
-          width: 100%;
-          height: 80vh;
-      }
-      
-      section.sec1 {
-          background: url(image/slider2.jpeg);
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
-          position: relative;
-          overflow: hidden;
-          background-attachment: fixed;
-          height: 500px;
-      }
-      
-      section.overlay1 {
-          margin: 70px 140px;
-          padding: 50px;
-      }
-      
-      section.overlay1 h1 {
-          text-align: left;
-          color: #DC2913;
-          font-family: Roboto Slab;
-          font-weight: 600;
-          font-size: 50px;
-          letter-spacing: 1px;
-      }
-      
-      section.overlay1 h3 {
-          color: #fff;
-          font-family: Roboto Slab;
-          font-weight: 600;
-          font-size: 40px;
-          letter-spacing: 1px;
-      }
-      
-      section.overlay1 h3 b {
-          color: #DC2913;
-      }
-      
-      section.overlay1 button {
-          background-color: #E74C3C;
-          transition: .5s;
-          border: none;
-          color: #fff;
-          padding: 10px 10px;
-          font-family: Poppins;
-          font-weight: 600;
-          font-size: 15px;
-          letter-spacing: 1px;
-          float: right;
-      }
-      
-      section.overlay1 button:hover {
-          background-color: #999999;
-      }
-      
-      section.overlay1 i {
-          color: #F15822;
-      }
-      
-      section.overlay2 {
-          background: rgba(232, 75, 57, .3);
-          padding: 300px 80px;
-      }
-      
-      section.overlay2 h3 {
-          color: #fff;
-      }
-      
-      section.overlay2 button {
-          background-color: #E74C3C;
-          transition: .5s;
-          border: none;
-          color: #fff;
-          padding: 10px 10px;
-          font-family: Poppins;
-          font-weight: 600;
-          font-size: 15px;
-          letter-spacing: 1px;
-          margin-left: 150px;
-      }
-      
-      section.overlay2 button:hover {
-          background-color: #999999;
-      }
-      
-      section.overlay2 button i {
-          color: #F15822;
-      }
-      
-      section.sec1:before {
-          content: '';
-          position: absolute;
-          top: 100%;
-          left: -50%;
-          width: 100%;
-          height: 100%;
-          background: #fff;
-          transform-origin: right;
-          transform: skewY(8deg);
-      }
-      
-      section.sec1:after {
-          content: '';
-          position: absolute;
-          top: 100%;
-          right: -50%;
-          width: 100%;
-          height: 100%;
-          background: #fff;
-          transform-origin: left;
-          transform: skewY(-8deg);
-      }
-      
-      section.sec3 {
-          background: url(image/slider3.jpeg);
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
-          position: relative;
-          overflow: hidden;
-          background-attachment: fixed;
-          height: 500px;
-      }
-      
-      section.sec3:before {
-          content: '';
-          position: absolute;
-          bottom: 100%;
-          left: 0%;
-          width: 100%;
-          height: 100%;
-          background: #fff;
-          transform-origin: left;
-          transform: skewY(8deg);
-      }
-      
-      section.sec2 {
-          height: auto;
-          padding: 60px 100px;
-          box-sizing: border-box;
-      }
-      
-      section.sec2 h1 {
-          text-align: center;
-          padding-bottom: 60px;
-          font-family: Poppins;
-          font-weight: 600;
-          font-size: 40px;
-          letter-spacing: 5px;
-      }
-      
-      section.sec2 p {
-          text-align: justify;
-      }
-      /* contact-area */
-      
-      .contact {
-          background: #f4f5f9;
-      }
-      
-      .contact .section-title {
-          padding-top: 50px;
-      }
-      
-      .contact .section-title h2 {
-          text-align: center;
-          background-color: #202020;
-          position: relative;
-          padding: 8px 12px;
-          padding-left: 20px;
-          margin-right: 10%;
-          color: #fff;
-          margin-bottom: 30px;
-          display: inline-block;
-      }
-      
-      .contact .section-title h2::before {
-          content: '';
-          width: 10px;
-          height: 35px;
-          background-color: #E74C3C;
-          position: absolute;
-          left: 0;
-          top: 54%;
-          transform: translateY(-50%);
-      }
-      
-      .contact .info-content {
-          display: flex;
-          padding-top: 30px;
-          padding-bottom: 50px;
-      }
-      
-      .contact .col-40 {
-          width: 40%;
-          padding: 100px 8%;
-          background: #fff;
-          margin-right: 10px;
-          box-shadow: 0px 1px 5px rgb(200, 200, 200);
-      }
-      
-      .contact .col-60 {
-          width: 60%;
-          padding: 100px 8%;
-          margin-left: 10px;
-          background: #fff;
-          box-shadow: 0px 1px 5px rgb(200, 200, 200);
-      }
-      
-      .contact .contact-info h5 {
-          color: #e74c3c;
-          margin-bottom: 30px;
-      }
-      
-      .contact .contact-info p {
-          margin-bottom: 60px;
-      }
-      
-      .contact form input,
-      .contact form textarea {
-          margin-bottom: 10px;
-          border: none;
-          border-bottom: 1px solid #e5e5e5;
-          padding: 10px 0px;
-      }
-      
-      .contact form input[type="submit"] {
-          margin-top: 30px;
-          padding: 10px 30px;
-          text-transform: uppercase;
-          color: #fff;
-          cursor: pointer;
-      }
-      
-      .contact form input[type="submit"]:hover {
-          background: #e74c3c;
-          transition: .7s;
-      }
-      
-      .contact-map {}
-      
-      .map-title {
-          padding: 40px 0;
-      }
-      
-      .map-title h2 {
-          text-align: center;
-          background-color: #202020;
-          position: relative;
-          padding: 8px 12px;
-          padding-left: 20px;
-          margin-right: 10%;
-          color: #fff;
-          margin-bottom: 30px;
-          display: inline-block;
-      }
-      
-      .map-title h2::before {
-          content: '';
-          width: 10px;
-          height: 35px;
-          background-color: #E74C3C;
-          position: absolute;
-          left: 0;
-          top: 54%;
-          transform: translateY(-50%);
-      }
-      
-      .map {}
-      /* login-area */
-      
-      .login-area {
-          margin: 0;
-          padding: 0;
-          background-image: url(image/login-background.jpg);
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
-          font-family: sans-serif;
-          height: 600px;
-          width: 100%;
-      }
-      
-      .loginbox {
-          width: 320px;
-          height: 420px;
-          background: #000;
-          color: #fff;
-          top: 50%;
-          left: 50%;
-          position: absolute;
-          transform: translate(-50%, -50%);
-          box-sizing: border-box;
-          padding: 15px;
-          margin-top: 80px;
-      }
-      
-      .loginbox img {
-          position: absolute;
-          top: -50px;
-          left: calc(50% - 50px);
-          height: 100px;
-          width: 100px;
-          border-radius: 50%;
-      }
-      
-      .loginbox h1 {
-          margin: 0;
-          margin-top: 50px;
-          padding: 0 0 20px;
-          font-size: 22px;
-          text-align: center;
-          font-weight: bold;
-      }
-      
-      .loginbox p {
-          margin: 0;
-          padding: 0;
-          font-weight: bold;
-      }
-      
-      .loginbox input {
-          width: 100%;
-          margin-bottom: 20px;
-      }
-      
-      .loginbox input[type="text"],
-      input[type="password"] {
-          border: none;
-          border-bottom: 1px solid #fff;
-          background: transparent;
-          outline: none;
-          height: 40px;
-          color: #fff;
-          font-size: 16px;
-      }
-      
-      .loginbox input[type="submit"] {
-          border: none;
-          outline: none;
-          height: 40px;
-          background: #E74C3C;
-          color: #fff;
-          font-size: 18px;
-          border-radius: 20px;
-      }
-      
-      .loginbox input[type="submit"]:hover {
-          cursor: pointer;
-          background: #999999;
-          color: #000;
-      }
-      
-      .loginbox a {
-          text-decoration: none;
-          font-size: 12px;
-          line-height: 20px;
-          color: darkgrey;
-          display: block;
-      }
-      
-      .loginbox a:hover {
-          color: #E74C3C;
-      }
+      border-radius: 50%;
+  }
+  .carousel-item {}
+  .carousel-item img {
+      height: 600px;
+  }
+  /* policy-area */
+  .policy-area {
+      padding: 50px 0;
+      background-color: #F5F5F5;
+  }
+  .policy-tag h2 {
+      text-align: center;
+      background-color: #202020;
+      position: relative;
+      padding: 8px 12px;
+      padding-left: 20px;
+      margin-right: 10%;
+      color: #fff;
+      margin-bottom: 30px;
+      display: inline-block;
+  }
+  .policy-tag h2::before {
+      content: '';
+      width: 10px;
+      height: 35px;
+      background-color: #E74C3C;
+      position: absolute;
+      left: 0;
+      top: 54%;
+      transform: translateY(-50%);
+  }
+  .service {
+      display: flex;
+      margin-bottom: 15px;
+      margin-top: 15px;
+  }
+  .policy-icon {
+      width: 20%;
+  }
+  .policy-icon img {
+      margin-top: -10px;
+  }
+  .policy-text {}
+  .policy-text h6 {
+      padding: 0px 20px;
+      font-family: tahoma;
+      font-weight: 800;
+  }
+  .policy-text p {
+      padding: 0px 20px;
+      font-family: Poppins;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 1px;
+  }
+  /* product-area  */
+  .product-area {}
+  .product-area h2 {
+      text-align: center;
+      background-color: #202020;
+      position: relative;
+      padding: 8px 12px;
+      padding-left: 20px;
+      margin-right: 10%;
+      color: #fff;
+      margin-bottom: 30px;
+      display: inline-block;
+      margin-top: 40px;
+  }
+  .product-area h2::before {
+      content: '';
+      width: 10px;
+      height: 35px;
+      background-color: #E74C3C;
+      position: absolute;
+      left: 0;
+      top: 54%;
+      transform: translateY(-50%);
+  }
+  .product-area .works-img {
+      position: relative;
+      overflow: hidden;
+  }
+  .product-area .works-img img {
+      height: 350px;
+      width: auto;
+  }
+  .product-area .works-img:hover .product-overlay {
+      height: 100%;
+  }
+  .product-area .works-img .product-overlay {
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      background: rgba(231, 76, 60, .8);
+      width: 100%;
+      height: 0%;
+      transition: .5s;
+      overflow: hidden;
+  }
+  .product-area .works-img .product-overlay h5 {
+      padding-top: 20px;
+      padding-bottom: 0px;
+      margin: 0;
+      position: absolute;
+      bottom: 120px;
+      left: 45px;
+      color: #fff;
+  }
+  .product-area .works-img .product-overlay h5::after {
+      content: '';
+      width: 45px;
+      height: 4px;
+      background-color: #fff;
+      position: absolute;
+      top: -25px;
+      left: 0%;
+  }
+  .product-area .works-img .product-overlay h6 {
+      margin: 0;
+      position: absolute;
+      bottom: 90px;
+      left: 45px;
+      color: #fff;
+  }
+  .product-area .works-img .product-overlay .add button {
+      position: absolute;
+      bottom: 40px;
+      left: 45px;
+      color: #fff;
+      background-color: #202020;
+      border: none;
+      font-size: 12px;
+      padding: 5px 10px;
+      cursor: pointer;
+  }
+  .product-area .works-img .product-overlay .details button {
+      position: absolute;
+      bottom: 40px;
+      left: 200px;
+      color: #fff;
+      background-color: #202020;
+      border: none;
+      font-size: 12px;
+      padding: 5px 10px;
+      cursor: pointer;
+  }
+  .filter-button-group {
+      padding: 10px 0;
+      padding-bottom: 40px;
+  }
+  .filter-button-group button {
+      border: none;
+      background-color: #E74C3C;
+      color: #fff;
+      padding: 10px 20px;
+  }
+  .filter-button-group button:hover {
+      cursor: pointer;
+      background-color: #999999;
+      border-radius: 12px;
+      color: #fff;
+  }
+  .filter-button-group .active {
+      background-color: #141414;
+      color: #fff;
+  }
+  /* review-area */
+  .review-area {
+      background-color: #F5F5F5;
+  }
+  .review-title {}
+  .review-title h2 {
+      text-align: center;
+      background-color: #202020;
+      position: relative;
+      padding: 8px 12px;
+      padding-left: 20px;
+      margin-right: 10%;
+      color: #fff;
+      margin-bottom: 30px;
+      display: inline-block;
+      margin-top: 40px;
+  }
+  .review-title h2::before {
+      content: '';
+      width: 10px;
+      height: 35px;
+      background-color: #E74C3C;
+      position: absolute;
+      left: 0;
+      top: 54%;
+      transform: translateY(-50%);
+  }
+  .review-video {
+      margin-bottom: 40px;
+  }
+  /* promo-area */
+  .promo {
+      background: url("image/promo.jpg");
+      background-attachment: fixed;
+      position: relative;
+      height: 400px;
+      width: auto;
+  }
+  .promo .promo-overlay {
+      background: rgba(232, 75, 57, .2);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      z-index: 2;
+  }
+  .promo .promo-overlay .promo-content {
+      text-align: center
+  }
+  .promo .promo-overlay .promo-content h2 {
+      text-transform: capitalize;
+      font-weight: 200;
+      color: #fff;
+      letter-spacing: 1px;
+      padding-top: 150px;
+  }
+  .promo .promo-overlay .promo-content h2 span {
+      font-weight: bold;
+  }
+  .promo .promo-overlay .promo-content p {
+      margin-bottom: 50px;
+      color: #fff;
+  }
+  /* footer-area */
+  .footer-area {
+      margin: 0;
+      padding: 0;
+      background-color: #999999;
+      position: relative;
+  }
+  .footer-area .icon-area {
+      margin-top: 50px;
+  }
+  .footer-area .icon-area ul {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  .footer-area .icon-area ul li {
+      list-style: none;
+      float: left;
+      margin: 10px;
+      width: 70px;
+      height: 70px;
+      line-height: 100px;
+      text-align: center;
+      background: #fff;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+      color: #262626;
+      font-size: 50px;
+      z-index: 1;
+      transition: .5s ease-in-out;
+  }
+  .footer-area .icon-area ul li:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      background: #ccc;
+      z-index: -1;
+      border-radius: 50%;
+      transform: scale(0);
+      transition: .3s ease-in-out
+  }
+  .footer-area .icon-area ul li:after {
+      content: '';
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      right: -100%;
+      top: 0;
+      background: rgba(255, 255, 255, .3);
+      transition: .5s ease-in-out;
+      transition-delay: .3s;
+  }
+  .footer-area .icon-area ul li:hover:before {
+      left: 0;
+      transform: scale(.9);
+  }
+  .footer-area .icon-area ul li:hover:after {
+      right: 0%;
+  }
+  .footer-area .icon-area ul li:nth-child(1):before {
+      background: #3b5999;
+  }
+  .footer-area .icon-area ul li:nth-child(2):before {
+      background: #55acee;
+  }
+  .footer-area .icon-area ul li:nth-child(3):before {
+      background: #0077B5;
+  }
+  .footer-area .icon-area ul li:nth-child(4):before {
+      background: #e4405f;
+  }
+  .footer-area .icon-area ul li i {
+      transition: .3s ease-in-out;
+      font-size: 20px;
+      position: absolute;
+      top: 40%;
+      left: 40%;
+  }
+  .footer-area .icon-area ul li:hover i {
+      color: #fff;
+  }
+  /* arrow-area */
+  .arrow-top {
+      width: 50px;
+      position: fixed;
+      bottom: 5%;
+      right: 5%;
+      display: none;
+  }
+  .arrow-top img {
+      width: 100%;
+  }
+  /* about-area */
+  .about-area {}
+  section.about-area {
+      width: 100%;
+      height: 80vh;
+  }
+  section.sec1 {
+      background: url(image/slider2.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+      background-attachment: fixed;
+      height: 500px;
+  }
+  section.overlay1 {
+      margin: 70px 140px;
+      padding: 50px;
+  }
+  section.overlay1 h1 {
+      text-align: left;
+      color: #DC2913;
+      font-family: Roboto Slab;
+      font-weight: 600;
+      font-size: 50px;
+      letter-spacing: 1px;
+  }
+  section.overlay1 h3 {
+      color: #fff;
+      font-family: Roboto Slab;
+      font-weight: 600;
+      font-size: 40px;
+      letter-spacing: 1px;
+  }
+  section.overlay1 h3 b {
+      color: #DC2913;
+  }
+  section.overlay1 button {
+      background-color: #E74C3C;
+      transition: .5s;
+      border: none;
+      color: #fff;
+      padding: 10px 10px;
+      font-family: Poppins;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 1px;
+      float: right;
+  }
+  section.overlay1 button:hover {
+      background-color: #999999;
+  }
+  section.overlay1 i {
+      color: #F15822;
+  }
+  section.overlay2 {
+      background: rgba(232, 75, 57, .3);
+      padding: 300px 80px;
+  }
+  section.overlay2 h3 {
+      color: #fff;
+  }
+  section.overlay2 button {
+      background-color: #E74C3C;
+      transition: .5s;
+      border: none;
+      color: #fff;
+      padding: 10px 10px;
+      font-family: Poppins;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 1px;
+      margin-left: 150px;
+  }
+  section.overlay2 button:hover {
+      background-color: #999999;
+  }
+  section.overlay2 button i {
+      color: #F15822;
+  }
+  section.sec1:before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: -50%;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      transform-origin: right;
+      transform: skewY(8deg);
+  }
+  section.sec1:after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      right: -50%;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      transform-origin: left;
+      transform: skewY(-8deg);
+  }
+  section.sec3 {
+      background: url(image/slider3.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+      background-attachment: fixed;
+      height: 500px;
+  }
+  section.sec3:before {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      transform-origin: left;
+      transform: skewY(8deg);
+  }
+  section.sec2 {
+      height: auto;
+      padding: 60px 100px;
+      box-sizing: border-box;
+  }
+  section.sec2 h1 {
+      text-align: center;
+      padding-bottom: 60px;
+      font-family: Poppins;
+      font-weight: 600;
+      font-size: 40px;
+      letter-spacing: 5px;
+  }
+  section.sec2 p {
+      text-align: justify;
+  }
+  /* contact-area */
+  .contact {
+      background: #f4f5f9;
+  }
+  .contact .section-title {
+      padding-top: 50px;
+  }
+  .contact .section-title h2 {
+      text-align: center;
+      background-color: #202020;
+      position: relative;
+      padding: 8px 12px;
+      padding-left: 20px;
+      margin-right: 10%;
+      color: #fff;
+      margin-bottom: 30px;
+      display: inline-block;
+  }
+  .contact .section-title h2::before {
+      content: '';
+      width: 10px;
+      height: 35px;
+      background-color: #E74C3C;
+      position: absolute;
+      left: 0;
+      top: 54%;
+      transform: translateY(-50%);
+  }
+  .contact .info-content {
+      display: flex;
+      padding-top: 30px;
+      padding-bottom: 50px;
+  }
+  .contact .col-40 {
+      width: 40%;
+      padding: 100px 8%;
+      background: #fff;
+      margin-right: 10px;
+      box-shadow: 0px 1px 5px rgb(200, 200, 200);
+  }
+  .contact .col-60 {
+      width: 60%;
+      padding: 100px 8%;
+      margin-left: 10px;
+      background: #fff;
+      box-shadow: 0px 1px 5px rgb(200, 200, 200);
+  }
+  .contact .contact-info h5 {
+      color: #e74c3c;
+      margin-bottom: 30px;
+  }
+  .contact .contact-info p {
+      margin-bottom: 60px;
+  }
+  .contact form input,
+  .contact form textarea {
+      margin-bottom: 10px;
+      border: none;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 10px 0px;
+  }
+  .contact form input[type="submit"] {
+      margin-top: 30px;
+      padding: 10px 30px;
+      text-transform: uppercase;
+      color: #fff;
+      cursor: pointer;
+  }
+  .contact form input[type="submit"]:hover {
+      background: #e74c3c;
+      transition: .7s;
+  }
+  .contact-map {}
+  .map-title {
+      padding: 40px 0;
+  }
+  .map-title h2 {
+      text-align: center;
+      background-color: #202020;
+      position: relative;
+      padding: 8px 12px;
+      padding-left: 20px;
+      margin-right: 10%;
+      color: #fff;
+      margin-bottom: 30px;
+      display: inline-block;
+  }
+  .map-title h2::before {
+      content: '';
+      width: 10px;
+      height: 35px;
+      background-color: #E74C3C;
+      position: absolute;
+      left: 0;
+      top: 54%;
+      transform: translateY(-50%);
+  }
+  .map {}
+  /* login-area */
+  .login-area {
+      margin: 0;
+      padding: 0;
+      background-image: url(image/login-background.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      font-family: sans-serif;
+      height: 600px;
+      width: 100%;
+  }
+  .loginbox {
+      width: 320px;
+      height: 420px;
+      background: #000;
+      color: #fff;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      box-sizing: border-box;
+      padding: 15px;
+      margin-top: 80px;
+  }
+  .loginbox img {
+      position: absolute;
+      top: -50px;
+      left: calc(50% - 50px);
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+  }
+  .loginbox h1 {
+      margin: 0;
+      margin-top: 50px;
+      padding: 0 0 20px;
+      font-size: 22px;
+      text-align: center;
+      font-weight: bold;
+  }
+  .loginbox p {
+      margin: 0;
+      padding: 0;
+      font-weight: bold;
+  }
+  .loginbox input {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+  .loginbox input[type="text"],
+  input[type="password"] {
+      border: none;
+      border-bottom: 1px solid #fff;
+      background: transparent;
+      outline: none;
+      height: 40px;
+      color: #fff;
+      font-size: 16px;
+  }
+  .loginbox input[type="submit"] {
+      border: none;
+      outline: none;
+      height: 40px;
+      background: #E74C3C;
+      color: #fff;
+      font-size: 18px;
+      border-radius: 20px;
+  }
+  .loginbox input[type="submit"]:hover {
+      cursor: pointer;
+      background: #999999;
+      color: #000;
+  }
+  .loginbox a {
+      text-decoration: none;
+      font-size: 12px;
+      line-height: 20px;
+      color: darkgrey;
+      display: block;
+  }
+  .loginbox a:hover {
+      color: #E74C3C;
+  }

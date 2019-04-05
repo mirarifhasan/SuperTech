@@ -30,8 +30,16 @@
                                     <li><a href="product.php"><b>Product</b></a></li>
                                     <li><a href="#"><b>My Profile</b></a></li>
                                     <li><a href="contact.php"><b>Contact</b></a></li>
-                                     <li><a href="sign_up.php"><button><b>Sign Up</b></button></a></li>
-                                    <li><a href="log_in.php"><button><b>Login</b></button></a></li>
+                                    <li>
+                                        <a href="sign_up.php">
+                                            <button><b>Sign Up</b></button>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="log_in.php">
+                                            <button><b>Login</b></button>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -45,21 +53,19 @@
         <div class="signupbox"> <img src="image/001.jpg" alt="pic">
             <h1>Sign Up Here</h1>
             <form>
-               
-                <input type="text" name="" placeholder="Enter First Name">
-                <br><br>
-                <input type="text" name="" placeholder="Enter Last Name">
-                <br><br>
+                <input type="text" name="" placeholder="Enter Your Name">
+                <br>
+                <br>
                 <input type="text" name="" placeholder="Enter Email">
-                <br><br>
+                <br>
+                <br>
                 <input type="number" name="" placeholder="Enter Phone Number">
-                <br><br>
-                <input type="text" name="" placeholder="Enter Username">
-                <br><br>
-                <input type="passward" name="" placeholder="Enter Passward">
-                <br><br>
-                <input type="submit" name="" value="Sign Up">
-                  </form>
+                <br>
+                <br>
+                <input type="password" name="" placeholder="Enter Password">
+                <br>
+                <br>
+                <input type="submit" name="" value="Sign Up"> </form>
         </div>
     </div>
     <div class="arrow-top"> <img src="image/arrow.png" alt=""> </div>

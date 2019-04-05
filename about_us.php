@@ -30,8 +30,16 @@
                                     <li><a href="product.php"><b>Product</b></a></li>
                                     <li><a href="#"><b>My Profile</b></a></li>
                                     <li><a href="contact.php"><b>Contact</b></a></li>
-                                      <li><a href="sign_up.php"><button><b>Sign Up</b></button></a></li>
-                                    <li><a href="log_in.php"><button><b>Login</b></button></a></li>
+                                    <li>
+                                        <a href="sign_up.php">
+                                            <button><b>Sign Up</b></button>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="log_in.php">
+                                            <button><b>Login</b></button>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -45,9 +53,9 @@
         <section class="sec1">
             <section class="overlay1">
                 <div class="container">
-                    <div class="about-title wow zoomIn"><h1>SUPER TECH</h1></div>
-                    <h3><b>Largest online</b> electronics company in Bangladesh.</h3>
-                </div>
+                    <div class="about-title wow zoomIn">
+                        <h1>SUPER TECH</h1></div>
+                    <h3><b>Largest online</b> electronics company in Bangladesh.</h3> </div>
             </section>
         </section>
         <section class="sec2">
@@ -65,7 +73,9 @@
                     </div>
                     <div class="col-md-5">
                         <div class="btn2">
-                            <a href="contact.php"><button>CONTACT US <i class="fas fa-angle-right"></i> </button></a>
+                            <a href="contact.php">
+                                <button>CONTACT US <i class="fas fa-angle-right"></i> </button>
+                            </a>
                         </div>
                     </div>
                 </div>
