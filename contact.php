@@ -27,14 +27,10 @@
                                 <ul class="nav justify-content-end">
                                     <li><a href="index.php"><b>Home</b></a></li>
                                     <li><a href="about_us.php"><b>About Us</b></a></li>
-                                    <li><a href="product.php"><b>Product</b></a></li>
+                                   
                                     <li><a href="#"><b>My Profile</b></a></li>
                                     <li><a href="contact.php"><b>Contact</b></a></li>
-                                    <li>
-                                        <a href="sign_up.php">
-                                            <button><b>Sign Up</b></button>
-                                        </a>
-                                    </li>
+                                  
                                     <li>
                                         <a href="log_in.php">
                                             <button><b>Login</b></button>
@@ -95,10 +91,10 @@
         <div class="container">
             <div class="icon-area">
                 <ul>
-                    <li><i class="fab fa-facebook-f"></i></li>
-                    <li><i class="fab fa-twitter"></i></li>
-                    <li><i class="fab fa-linkedin-in"></i></li>
-                    <li><i class="fab fa-instagram"></i></li>
+                   <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                 </ul>
             </div>
         </div>

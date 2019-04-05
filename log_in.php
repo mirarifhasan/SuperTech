@@ -79,14 +79,10 @@ if(isset($_POST["login"])){
                                 <ul class="nav justify-content-end">
                                     <li><a href="index.php"><b>Home</b></a></li>
                                     <li><a href="about_us.php"><b>About Us</b></a></li>
-                                    <li><a href="product.php"><b>Product</b></a></li>
+                                    
                                     <li><a href="#"><b>My Profile</b></a></li>
                                     <li><a href="contact.php"><b>Contact</b></a></li>
-                                    <li>
-                                        <a href="sign_up.php">
-                                            <button><b>Sign Up</b></button>
-                                        </a>
-                                    </li>
+                                    
                                     <li>
                                         <a href="log_in.php">
                                             <button><b>Login</b></button>
@@ -108,8 +104,10 @@ if(isset($_POST["login"])){
                 <p>Email</p>
                 <input type="text" name="email" placeholder="Enter Email" value="<?php echo $email; ?>">
                 <p>Password</p>
+
                 <input type="password" name="password" placeholder="Enter Password" value="<?php echo $password; ?>">
-                <input type="submit" name="login" value="Login"> <a href="#">Lost your password?</a> <a href="#">Don't have an account?</a> </form>
+                <input type="submit" name="login" value="Login"> <a href="#">Lost your password?</a> <a href="sign_up.php">Don't have an account?</a> </form>
+
         </div>
     </div>
     <div class="arrow-top"> <img src="image/arrow.png" alt=""> </div>
