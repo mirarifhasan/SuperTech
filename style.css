@@ -272,7 +272,7 @@
   }
   /* promo-area */
   .promo {
-      background: url("image/promo.jpg");
+      background: url("image/background/promo.jpg");
       background-attachment: fixed;
       position: relative;
       height: 400px;
@@ -411,7 +411,7 @@
       height: 80vh;
   }
   section.sec1 {
-      background: url(image/slider2.jpeg);
+      background: url(image/background/slider2.jpeg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -508,7 +508,7 @@
       transform: skewY(-8deg);
   }
   section.sec3 {
-      background: url(image/slider3.jpeg);
+      background: url(image/background/slider3.jpeg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -646,7 +646,7 @@
   .login-area {
       margin: 0;
       padding: 0;
-      background-image: url(image/login-background.jpg);
+      background-image: url(image/background/login-background.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -656,7 +656,6 @@
   }
   .loginbox {
       width: 320px;
-      height: 420px;
       background: #fff;
       color: #fff;
       top: 50%;
@@ -683,6 +682,10 @@
       text-align: center;
       font-weight: bold;
       color: #000;
+  }  
+  .loginbox h2 {
+    font-size: 12px;
+    margin-top: -12px;
   }
   .loginbox p {
       margin: 0;
@@ -735,7 +738,7 @@
 .signup-area {
       margin: 0;
       padding: 0;
-      background-image: url(image/login-background.jpg);
+      background-image: url(image/background/login-background.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
