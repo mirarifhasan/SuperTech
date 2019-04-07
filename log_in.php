@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-//session_destroy();
 
 $host = 'localhost';
 $user = 'root';
@@ -13,19 +12,12 @@ $email='';
 $password='';
 $errorEmail=''; $errorPassword = ''; $errorUser='';
 
-function destroy(){
-    session_destroy();
-}
-
 function clean_text($string)
 {
      $string = trim($string);
      $string = stripslashes($string);
      $string = htmlspecialchars($string);
      return $string;
-}
-if(isset($_POST["logout"])){
-    destroy();
 }
 
 if(isset($_POST["login"])){
@@ -52,16 +44,15 @@ if(isset($_POST["login"])){
         $sql = 'select * from user where email="'.$email.'" and password="'.$password.'"';
         $result = mysqli_query($link, $sql);
         $noOfData = mysqli_num_rows($result);
-        
+
         if($noOfData>0){
             $_SESSION['email'] = $email;
             $_SESSION['password'] = $password;        
-            header('Location: index.php');
+            header('Location: my_profile.php');
         }else
             $errorUser = '<h2><label class="text-danger">Wrong input</label></h2>';
     }
 }
-mysqli_close($link);
 ?>
 
 
@@ -94,20 +85,18 @@ mysqli_close($link);
                                 <ul class="nav justify-content-end">
                                     <li><a href="index.php"><b>Home</b></a></li>
                                     <li><a href="about_us.php"><b>About Us</b></a></li>
-                                    
-                                    <li><a href="#"><b>My Profile</b></a></li>
+                                    <li><a href="my_profile.php"><b>My Profile</b></a></li>
                                     <li><a href="contact.php"><b>Contact</b></a></li>
                                     
                                     <?php
-                                    if(isset($_SESSION['email']) != ''){
-                                        echo '<li><a href="index.php"><button name="logout"><b>Logout</b></button></a></li>';
+                                    if(isset($_SESSION['email'])){
+                                        echo '<li><a href="log_out.php"><button><b>Logout</b></button></a></li>';
                                     }
-                                        
-                                    else 
+                                    else{
                                         echo '<li><a href="log_in.php"><button><b>Login</b></button></a></li>';
+                                    }
                                     ?>
                                     
-
                                 </ul>
                             </div>
                         </div>

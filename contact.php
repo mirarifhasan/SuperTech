@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,14 +34,17 @@
                                     <li><a href="index.php"><b>Home</b></a></li>
                                     <li><a href="about_us.php"><b>About Us</b></a></li>
                                    
-                                    <li><a href="#"><b>My Profile</b></a></li>
+                                    <li><a href="my_profile.php"><b>My Profile</b></a></li>
                                     <li><a href="contact.php"><b>Contact</b></a></li>
                                   
-                                    <li>
-                                        <a href="log_in.php">
-                                            <button><b>Login</b></button>
-                                        </a>
-                                    </li>
+                                    <?php
+                                    if(isset($_SESSION['email'])){
+                                        echo '<li><a href="log_out.php"><button><b>Logout</b></button></a></li>';
+                                    }
+                                    else{
+                                        echo '<li><a href="log_in.php"><button><b>Login</b></button></a></li>';
+                                    }
+                                    ?>
                                 </ul>
                             </div>
                         </div>

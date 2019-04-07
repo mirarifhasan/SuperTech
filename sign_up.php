@@ -1,3 +1,47 @@
+<?php
+//session_start();
+
+$host = 'localhost';
+$user = 'root';
+$password = '';
+$db = 'shoptech';
+$link = mysqli_connect($host, $user, $password, $db);
+
+$name = '';
+$email = '';
+$phone = '';
+$password = '';
+$error = '';
+
+function clean_text($string)
+{
+     $string = trim($string);
+     $string = stripslashes($string);
+     $string = htmlspecialchars($string);
+     return $string;
+}
+
+if(isset($_POST["signpup"])){
+    
+    $name = clean_text($_POST["name"]);
+    $email = clean_text($_POST["email"]);
+    $phone = clean_text($_POST["phone"]);
+    $password = clean_text($_POST["password"]);
+    
+    if($name=='' || $email=='' || $phone==''|| $password==''){
+        $error = '<h2><label class="text-danger">Fill all fields</label></h2>';
+    }
+    else{
+        $sql = 'INSERT INTO user VALUES("'.$name.'", "'.$email.'", "'.$phone.'", "'.$password.'")';
+        $resultInsert = mysqli_query($link, $sql);
+        header('Location: my_profile.php');
+    }
+    header('Location: index.php');
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +72,7 @@
                                     <li><a href="index.php"><b>Home</b></a></li>
                                     <li><a href="about_us.php"><b>About Us</b></a></li>
                                    
-                                    <li><a href="#"><b>My Profile</b></a></li>
+                                    <li><a href="my_profile.php"><b>My Profile</b></a></li>
                                     <li><a href="contact.php"><b>Contact</b></a></li>
                                    
                                     <li>
@@ -49,19 +93,21 @@
         <div class="signupbox"> <img src="image/icon/001.jpg" alt="pic">
             <h1>Sign Up Here</h1>
             <form>
-                <input type="text" name="" placeholder="Enter Your Name">
+                <input type="text" name="name" placeholder="Enter Your Name">
                 <br>
                 <br>
-                <input type="text" name="" placeholder="Enter Email">
+                <input type="text" name="email" placeholder="Enter Email">
                 <br>
                 <br>
-                <input type="number" name="" placeholder="Enter Phone Number">
+                <input type="text" name="phone" placeholder="Enter Phone Number">
                 <br>
                 <br>
-                <input type="password" name="" placeholder="Enter Password">
+                <input type="password" name="password" placeholder="Enter Password">
                 <br>
                 <br>
-                <input type="submit" name="" value="Sign Up"> </form>
+                <input type="submit" name="signpup" value="Sign Up">
+
+            </form>
         </div>
     </div>
     <div class="arrow-top"> <img src="image/icon/arrow.png" alt=""> </div>
