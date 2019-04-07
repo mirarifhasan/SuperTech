@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 
 $host = 'localhost';
 $user = 'root';
@@ -21,7 +21,7 @@ function clean_text($string)
      return $string;
 }
 
-if(isset($_POST["signpup"])){
+if(isset($_POST["signup"])){
     
     $name = clean_text($_POST["name"]);
     $email = clean_text($_POST["email"]);
@@ -29,14 +29,15 @@ if(isset($_POST["signpup"])){
     $password = clean_text($_POST["password"]);
     
     if($name=='' || $email=='' || $phone==''|| $password==''){
-        $error = '<h2><label class="text-danger">Fill all fields</label></h2>';
+        $error = '<h2><label class="text-danger">Fill all the fields</label></h2>';
     }
     else{
-        $sql = 'INSERT INTO user VALUES("'.$name.'", "'.$email.'", "'.$phone.'", "'.$password.'")';
+        $sql = 'INSERT INTO user (name, email, phone, password) VALUES("'.$name.'", "'.$email.'", "'.$phone.'", "'.$password.'")';
+        $_SESSION['email'] = $email;
+        $_SESSION['password'] = $password;
         $resultInsert = mysqli_query($link, $sql);
-        header('Location: my_profile.php');
+        header('Location: index.php');
     }
-    header('Location: index.php');
 }
 
 ?>
@@ -92,25 +93,25 @@ if(isset($_POST["signpup"])){
     <div class="signup-area">
         <div class="signupbox"> <img src="image/icon/001.jpg" alt="pic">
             <h1>Sign Up Here</h1>
-            <form>
-                <input type="text" name="name" placeholder="Enter Your Name">
+            <form method="post">
+                <input type="text" name="name" placeholder="Enter Your Name" value="<?php echo $name; ?>">
                 <br>
                 <br>
-                <input type="text" name="email" placeholder="Enter Email">
+                <input type="text" name="email" placeholder="Enter Email" value="<?php echo $email; ?>">
                 <br>
                 <br>
-                <input type="text" name="phone" placeholder="Enter Phone Number">
+                <input type="text" name="phone" placeholder="Enter Phone Number" value="<?php echo $phone; ?>">
                 <br>
                 <br>
-                <input type="password" name="password" placeholder="Enter Password">
+                <input type="password" name="password" placeholder="Enter Password" value="<?php echo $password; ?>">
                 <br>
                 <br>
-                <input type="submit" name="signpup" value="Sign Up">
-
+                <input type="submit" name="signup" value="Sign Up">
+                <?php echo $error; ?>
             </form>
         </div>
     </div>
-    <div class="arrow-top"> <img src="image/icon/arrow.png" alt=""> </div>
+    <div class="arrow-top"> <img src="image/icon/top.png" alt=""> </div>
     <!-- Link -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>

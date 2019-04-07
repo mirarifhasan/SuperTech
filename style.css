@@ -72,8 +72,8 @@
       
       .slider {}
       
-      border-radius: 50%;
-  }
+
+
   .carousel-item {}
   .carousel-item img {
       height: 600px;
@@ -776,6 +776,10 @@
       font-weight: bold;
       color: #000;
   }
+
+ .signupbox h2{
+     font-size: 14px;
+ }
 
   .signupbox input {
       width: 100%;

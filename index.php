@@ -13,7 +13,6 @@ function activeHeader(){
     global $link;
     $sql = "SELECT img_dir FROM feature WHERE imageID='1'";
     $result = mysqli_query($link, $sql);
-    $noOfData = mysqli_num_rows($result);
     while($row = mysqli_fetch_array($result)){
         return ($row['img_dir']);
     }

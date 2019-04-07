@@ -48,7 +48,7 @@ if(isset($_POST["login"])){
         if($noOfData>0){
             $_SESSION['email'] = $email;
             $_SESSION['password'] = $password;        
-            header('Location: my_profile.php');
+            header('Location: index.php');
         }else
             $errorUser = '<h2><label class="text-danger">Wrong input</label></h2>';
     }
@@ -124,7 +124,7 @@ if(isset($_POST["login"])){
                 
         </div>
     </div>
-    <div class="arrow-top"> <img src="image/icon/arrow.png" alt=""> </div>
+    <div class="arrow-top"> <img src="image/icon/top.png" alt=""> </div>
     
     <!-- Link -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
