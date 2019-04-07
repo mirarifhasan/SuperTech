@@ -26,16 +26,16 @@ function activeHeader(){
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SUPER TECH</title>
-<link rel="shortcut icon" href="image/logo.png">
-<!-- Link -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" href="css/owl.carousel.min.css">
-<link rel="stylesheet" href="css/animate.min.css">
-<link rel="stylesheet" href="style.css"> </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SUPER TECH</title>
+    <link rel="shortcut icon" href="image/logo.png">
+    <!-- Link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="style.css"> </head>
 
 <body>
 <!-- header-area -->
@@ -63,7 +63,7 @@ function activeHeader(){
                                     echo '<li><a href="log_in.php"><button><b>Login</b></button></a></li>';
                                 }
                                 ?>
-                            
+
                             </ul>
                         </div>
                     </div>
@@ -84,17 +84,17 @@ function activeHeader(){
                 </ol>
                 <div class="carousel-inner">
                     <?php echo '<div class="carousel-item active"> <img src="'.activeHeader().'" class="d-block w-100" alt="0"> </div>';?>
-                    
-                    <?php 
-                        for($i=2; $i<=6; $i++){
-                            $sql = "SELECT img_dir FROM feature WHERE imageID='".$i."'";
-                            $result = mysqli_query($link, $sql);
-                            $noOfData = mysqli_num_rows($result);
-                            while($row = mysqli_fetch_array($result)){
-                                echo '<div class="carousel-item"> <img src="'.($row['img_dir']).'" class="d-block w-100" alt="1"> </div>';
-                                
-                            }
+
+                    <?php
+                    for($i=2; $i<=6; $i++){
+                        $sql = "SELECT img_dir FROM feature WHERE imageID='".$i."'";
+                        $result = mysqli_query($link, $sql);
+                        $noOfData = mysqli_num_rows($result);
+                        while($row = mysqli_fetch_array($result)){
+                            echo '<div class="carousel-item"> <img src="'.($row['img_dir']).'" class="d-block w-100" alt="1"> </div>';
+
                         }
+                    }
                     ?>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
@@ -172,7 +172,8 @@ function activeHeader(){
     </div>
     <div class="row grid no-gutters">
         <div class="col-md-3 grid-item laptop animation wow zoomIn">
-            <div class="works-img"> <img src="image/laptop%201.jpg" class="img-fluid" alt="pic">
+            <div class="works-img">
+                <img src="image/laptop1.jpg" class="img-fluid" alt="pic">
                 <div class="product-overlay">
                     <h5>Product Name</h5>
                     <h6>Price: Amount</h6>
@@ -242,7 +243,7 @@ function activeHeader(){
             </div>
         </div>
         <div class="col-md-3 grid-item laptop animation wow zoomIn">
-            <div class="works-img"> <img src="image/laptop%206.jpg" class="img-fluid" alt="pic">
+            <div class="works-img"> <img src="image/laptop6.jpg" class="img-fluid" alt="pic">
                 <div class="product-overlay">
                     <h5>Product Name</h5>
                     <h6>Price: Amount</h6>
@@ -743,7 +744,7 @@ function activeHeader(){
         </div>
     </div>
 </section>
- <!-- arrow-top -->
+<!-- arrow-top -->
 <div class="arrow-top"> <img src="image/icon/top.png" alt=""> </div>
 <!-- Link -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
