@@ -72,8 +72,8 @@
       
       .slider {}
       
-      border-radius: 50%;
-  }
+
+
   .carousel-item {}
   .carousel-item img {
       height: 600px;
@@ -224,17 +224,25 @@
       padding: 10px 0;
       padding-bottom: 40px;
   }
-  .filter-button-group button {
+.filter-button-group button a{
+   text-decoration: none;
+    color: #fff; 
+}
+  .filter-button-group button{
       border: none;
       background-color: #E74C3C;
       color: #fff;
       padding: 10px 20px;
+      
+     
   }
   .filter-button-group button:hover {
       cursor: pointer;
       background-color: #999999;
       border-radius: 12px;
       color: #fff;
+      text-decoration: none;
+      
   }
   .filter-button-group .active {
       background-color: #141414;
@@ -272,7 +280,7 @@
   }
   /* promo-area */
   .promo {
-      background: url("image/promo.jpg");
+      background: url("image/background/promo.jpg");
       background-attachment: fixed;
       position: relative;
       height: 400px;
@@ -411,7 +419,7 @@
       height: 80vh;
   }
   section.sec1 {
-      background: url(image/slider2.jpeg);
+      background: url(image/background/slider2.jpeg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -508,7 +516,7 @@
       transform: skewY(-8deg);
   }
   section.sec3 {
-      background: url(image/slider3.jpeg);
+      background: url(image/background/slider3.jpeg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -646,7 +654,7 @@
   .login-area {
       margin: 0;
       padding: 0;
-      background-image: url(image/login-background.jpg);
+      background-image: url(image/background/login-background.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -656,7 +664,6 @@
   }
   .loginbox {
       width: 320px;
-      height: 420px;
       background: #fff;
       color: #fff;
       top: 50%;
@@ -683,6 +690,10 @@
       text-align: center;
       font-weight: bold;
       color: #000;
+  }  
+  .loginbox h2 {
+    font-size: 12px;
+    margin-top: -12px;
   }
   .loginbox p {
       margin: 0;
@@ -735,7 +746,7 @@
 .signup-area {
       margin: 0;
       padding: 0;
-      background-image: url(image/login-background.jpg);
+      background-image: url(image/background/login-background.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -773,6 +784,10 @@
       font-weight: bold;
       color: #000;
   }
+
+ .signupbox h2{
+     font-size: 14px;
+ }
 
   .signupbox input {
       width: 100%;

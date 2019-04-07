@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +25,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="logo"> <img src="image/logo.png" class="img-fluid" alt=""> </div>
+                        <div class="logo"> <img src="image/icon/logo.png" class="img-fluid" alt=""> </div>
                     </div>
                     <div class="col-md-8">
                         <div class="menu-area">
@@ -28,14 +34,17 @@
                                     <li><a href="index.php"><b>Home</b></a></li>
                                     <li><a href="about_us.php"><b>About Us</b></a></li>
                                     
-                                    <li><a href="#"><b>My Profile</b></a></li>
+                                    <li><a href="my_profile.php"><b>My Profile</b></a></li>
                                     <li><a href="contact.php"><b>Contact</b></a></li>
                                    
-                                    <li>
-                                        <a href="log_in.php">
-                                            <button><b>Login</b></button>
-                                        </a>
-                                    </li>
+                                    <?php
+                                    if(isset($_SESSION['email'])){
+                                        echo '<li><a href="log_out.php"><button><b>Logout</b></button></a></li>';
+                                    }
+                                    else{
+                                        echo '<li><a href="log_in.php"><button><b>Login</b></button></a></li>';
+                                    }
+                                    ?>
                                 </ul>
                             </div>
                         </div>
@@ -83,7 +92,7 @@
     
     
 
-    <div class="arrow-top"> <img src="image/arrow.png" alt=""> </div>
+    <div class="arrow-top"> <img src="image/icon/arrow.png" alt=""> </div>
     <!-- Link -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>

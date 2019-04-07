@@ -1,3 +1,47 @@
+<?php
+session_start();
+
+$host = 'localhost';
+$user = 'root';
+$password = '';
+$db = 'shoptech';
+$link = mysqli_connect($host, $user, $password, $db);
+
+$name = '';
+$email = '';
+$subject = '';
+$message = '';
+
+
+if(isset($_POST["sendMessage"])){
+
+    if(isset($_POST["message"])){
+        $message = $_POST["message"];
+    }$name = $_POST["name"];
+    $email = $_POST["email"];
+    $subject = $_POST["subject"];
+
+    if($name=='' || $email=='' || $subject=='' || $message==''){
+
+    }else{
+        $sql = "INSERT INTO message (name, email, subject, description) VALUES ('".$name."', '".$email."', '".$subject."', '".$message."')";
+        $resultInsert = mysqli_query($link, $sql);
+        $lastInsertID = mysqli_insert_id($link);
+
+        header('Location: index.php');
+    }
+
+
+
+
+
+}
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +63,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="logo"> <img src="image/logo.png" class="img-fluid" alt=""> </div>
+                        <div class="logo"> <img src="image/icon/logo.png" class="img-fluid" alt=""> </div>
                     </div>
                     <div class="col-md-8">
                         <div class="menu-area">
@@ -28,14 +72,17 @@
                                     <li><a href="index.php"><b>Home</b></a></li>
                                     <li><a href="about_us.php"><b>About Us</b></a></li>
                                    
-                                    <li><a href="#"><b>My Profile</b></a></li>
+                                    <li><a href="my_profile.php"><b>My Profile</b></a></li>
                                     <li><a href="contact.php"><b>Contact</b></a></li>
                                   
-                                    <li>
-                                        <a href="log_in.php">
-                                            <button><b>Login</b></button>
-                                        </a>
-                                    </li>
+                                    <?php
+                                    if(isset($_SESSION['email'])){
+                                        echo '<li><a href="log_out.php"><button><b>Logout</b></button></a></li>';
+                                    }
+                                    else{
+                                        echo '<li><a href="log_in.php"><button><b>Login</b></button></a></li>';
+                                    }
+                                    ?>
                                 </ul>
                             </div>
                         </div>
@@ -63,12 +110,12 @@
                     </div>
                 </div>
                 <div class="col-60 col-100 wow slideInRight">
-                    <form action="">
-                        <input class="form-control" type="text" placeholder="Name">
-                        <input class="form-control" type="email" placeholder="Email">
-                        <input class="form-control" type="text" placeholder="Subject">
-                        <textarea class="form-control" name="" id="" cols="10" rows="5" placeholder="Message"></textarea>
-                        <input class="mb-0" type="submit" value="send message"> </form>
+                    <form method="post">
+                        <input class="form-control" type="text" name="name" placeholder="Name" value="<?php echo $name?>">
+                        <input class="form-control" type="email" name="email" placeholder="Email" value="<?php echo $email?>">
+                        <input class="form-control" type="text" name="subject" placeholder="Subject" value="<?php echo $subject?>">
+                        <textarea class="form-control" name="message" id="" cols="10" rows="5" placeholder="Message"></textarea>
+                        <input class="mb-0" type="submit" name="sendMessage" value="send message"/> </form>
                 </div>
             </div>
         </div>
@@ -99,7 +146,7 @@
             </div>
         </div>
     </section>
-    <div class="arrow-top"> <img src="image/arrow.png" alt=""> </div>
+    <div class="arrow-top"> <img src="image/icon/top.png" alt=""> </div>
     <!-- Link -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
