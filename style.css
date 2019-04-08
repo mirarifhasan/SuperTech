@@ -224,17 +224,21 @@
       padding: 10px 0;
       padding-bottom: 40px;
   }
-  .filter-button-group button {
+  .filter-button-group button a{
       border: none;
       background-color: #E74C3C;
       color: #fff;
       padding: 10px 20px;
+      text-decoration: none;
+      overflow: hidden;
   }
-  .filter-button-group button:hover {
+  .filter-button-group button a:hover {
       cursor: pointer;
       background-color: #999999;
       border-radius: 12px;
       color: #fff;
+      text-decoration: none;
+      overflow: hidden;
   }
   .filter-button-group .active {
       background-color: #141414;

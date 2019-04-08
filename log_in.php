@@ -47,7 +47,10 @@ if(isset($_POST["login"])){
 
         if($noOfData>0){
             $_SESSION['email'] = $email;
-            $_SESSION['password'] = $password;        
+            $_SESSION['password'] = $password;
+
+            $row =  mysqli_fetch_array($result);
+            $_SESSION['userID'] = $row['userID'];
             header('Location: index.php');
         }else
             $errorUser = '<h2><label class="text-danger">Wrong input</label></h2>';
