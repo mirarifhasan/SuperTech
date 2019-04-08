@@ -86,16 +86,15 @@ function activeHeader()
                     <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
                 </ol>
                 <div class="carousel-inner">
-                    <?php echo '<div class="carousel-item active"> <img src="' . activeHeader() . '" class="d-block w-100" alt="0"> </div>'; ?>
-
                     <?php
-                    for ($i = 2; $i <= 6; $i++) {
-                        $sql = "SELECT img_dir FROM feature WHERE imageID='" . $i . "'";
-                        $result = mysqli_query($link, $sql);
-                        $noOfData = mysqli_num_rows($result);
-                        while ($row = mysqli_fetch_array($result)) {
-                            echo '<div class="carousel-item"> <img src="' . ($row['img_dir']) . '" class="d-block w-100" alt="1"> </div>';
-                        }
+                    $sql = "SELECT img_dir FROM feature";
+                    $result = mysqli_query($link, $sql);
+
+                    $row = mysqli_fetch_assoc($result);
+                    echo '<div class="carousel-item active"> <img src="' . ($row['img_dir']) . '" class="d-block w-100" alt="0"> </div>';
+
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo '<div class="carousel-item"> <img src="' . ($row['img_dir']) . '" class="d-block w-100" alt="1"> </div>';
                     }
                     ?>
                 </div>
@@ -167,15 +166,18 @@ function activeHeader()
     <div class="container">
         <h2>Our Product</h2>
         <div class="button-group filter-button-group">
-            <form method="post">
 
-                <button><a href="/SuperTech">All</a></button>
-                <button><a href="/SuperTech/?category=laptop">Laptop</a></button>
-                <button><a href="/SuperTech/?category=androidmobile">Android Mobile</a></button>
+            <button><a href="/SuperTech">All</a></button>
+            <button><a href="/SuperTech/?category=laptop">Laptop</a></button>
+            <button><a href="/SuperTech/?category=androidmobile">Android Mobile</a></button>
+            <button><a href="/SuperTech/?category=watch">Watch</a></button>
+            <button><a href="/SuperTech/?category=smarttelevision">Smart Television</a></button>
+            <button><a href="/SuperTech/?category=headphone">Headphone</a></button>
+            <button><a href="/SuperTech/?category=others">Others</a></button>
 
-                <?php
-                //var_dump($_GET);die();
-                ?>
+            <?php
+            //var_dump($_GET);die();
+            ?>
         </div>
     </div>
 
