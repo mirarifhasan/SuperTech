@@ -60,7 +60,7 @@ function activeHeader()
                                 <li><a href="contact.php"><b>Contact</b></a></li>
 
                                 <?php
-                                if (isset($_SESSION['email'])) {
+                                if (isset($_SESSION['userID'])) {
                                     echo '<li><a href="log_out.php"><button><b>Logout</b></button></a></li>';
                                 } else {
                                     echo '<li><a href="log_in.php"><button><b>Login</b></button></a></li>';
@@ -192,20 +192,19 @@ function activeHeader()
             $count = mysqli_num_rows($run);
             if ($count > 0) {
                 while ($row = mysqli_fetch_assoc($run)) {
-
         ?>
 
-        <div class="col-md-3 grid-item <?php echo $row['category']; ?> animation wow zoomIn">
+        <div class="col-md-3 grid-item <?php echo $row['cate<button>Add to cart</button>gory']; ?> animation wow zoomIn">
             <div class="works-img">
                 <img src="<?php echo $row['image'] ?>" class="img-fluid" alt="pic">
                 <div class="product-overlay">
                     <h5><?php echo $row['name'] ?></h5>
-                    <h6>Price: <?php echo $row['price'] ?></h6>
+                    <h6>Price: <?php echo $row['price']; ?></h6>
                     <div class="add">
-                        <button>Add to cart</button>
+                        <button><a href="cart.php">Add to cart</a></button>
                     </div>
                     <div class="details">
-                        <button>Details</button>
+                        <button><a href="product.php?id=<?php echo $row['productid']; ?>">Details</a></button>
                     </div>
                 </div>
             </div>
@@ -228,10 +227,10 @@ function activeHeader()
                                 <h5><?php echo $row['name'] ?></h5>
                                 <h6>Price: <?php echo $row['price'] ?></h6>
                                 <div class="add">
-                                    <button>Add to cart</button>
+                                    <button><a href="cart.php?id=<?php echo $row['productID']; ?>">Add to cart</a></button>
                                 </div>
                                 <div class="details">
-                                    <button>Details</button>
+                                    <button><a href="product.php?id=<?php echo $row['productID']; ?>">Details</a></button>
                                 </div>
                             </div>
                         </div>
