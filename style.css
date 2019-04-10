@@ -930,27 +930,23 @@
    height: 480px;
     
 }
-.product-details h6{
-    padding: 5px 12px;
-    background-color: #E74C3C;
-    color: #fff;
-    display: inline-block;
-    margin: 20px 30px;
-     font-family: tahoma;
-}
+
 .product-details h2{
      margin: 0px 30px;
      font-family: tahoma;
+   padding-top: 40px;
 }
 .product-details p{
      margin: 8px 30px;
     font-size: 15px;
     font-family: tahoma;
+   
 }
 .product-details h3{
       margin: 15px 30px;
     color:  #E74C3C;
      font-family: tahoma;
+      padding-top: 40px;
 }
 .product-details label{
      margin: 5px 30px;
@@ -983,12 +979,71 @@
     font-size: 15px;
     text-align: justify;
     padding: 23px 0;
+    padding-top: 30px;
     
 }
 
+/* cart-area */
+.cart-area{}
+ 
+.cart-area .table-box
+{
+	width: 800px;
+	height: 400px;
+	overflow-y: scroll;
+	background: #fff;
+   
+	
+}
+.cart-area .table-box table
+{
+	width: 100%;
+  
+    
+}
+ .cart-area.table-box table, th, td
+{
+	border: 1px solid #202020;
+	border-collapse: collapse;
+	text-align: left;
+}
+.cart-area .table-box table th
+{
+	position: sticky;
+	top: 0;
+	background:  #E74C3C;
+	color: #fff;
+}
+.cart-area .table-box table tr th:nth-child(1)
+{
+	width: 60px;
+	text-align: center;
+	background: #DC2913;
+}
+.cart-area .table-box table tr td:nth-child(1)
+{
+	background: #E74C3C;
+	text-align: center;
+	color: #fff;
+}
 
-  
-  
+.cart-area button{
+    margin-left: 700px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    background-color: #E74C3C;
+    color: #fff;
+    border: none;
+    padding: 4px 8px;
+    font-family: tahoma;
+}
+.cart-area button:hover{
+    background-color: #999999;
+}
+.cart-area button a{
+    text-decoration: none;
+     color: #fff;
+}  
 
 
 
