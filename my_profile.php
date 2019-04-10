@@ -68,11 +68,13 @@ $link = mysqli_connect($host, $user, $password, $db);
         <div class="my-profile-area">
             <div class="my-profile">
                 <?php
-                $sql = 'select * from user where email="'.$email.'" and password="'.$password.'"';
+                $sql = 'select * from user where email="'.$_SESSION['email'].'"';
+                $result = mysqli_query($link, $sql);
+                $row = mysqli_fetch_array($result)
                 ?>
-                <p><b>Name: </b>Customer Name</p>
-                <p><b>Email: </b>Customer Email</p>
-                <p><b>Phone: </b>Customer Phone Number</p>
+                <p><b>Name: </b><?php echo $row['name']?></p>
+                <p><b>Email: </b><?php echo $row['email']?></p>
+                <p><b>Phone: </b><?php echo $row['phone']?></p>
             </div>
             <div class="table-box">
                 <table cellpadding="10">
