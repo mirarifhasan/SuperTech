@@ -64,7 +64,7 @@ if(isset($_POST["signup"])){
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="logo"> <img src="image/icon/logo.png" class="img-fluid" alt=""> </div>
+                        <div class="logo animation wow zoomIn"> <img src="image/icon/logo.png" class="img-fluid" alt=""> </div>
                     </div>
                     <div class="col-md-8">
                         <div class="menu-area">

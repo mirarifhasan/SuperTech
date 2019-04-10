@@ -63,7 +63,7 @@ if(isset($_POST["sendMessage"])){
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="logo"> <img src="image/icon/logo.png" class="img-fluid" alt=""> </div>
+                        <div class="logo animation wow zoomIn"> <img src="image/icon/logo.png" class="img-fluid" alt=""> </div>
                     </div>
                     <div class="col-md-8">
                         <div class="menu-area">
@@ -126,7 +126,7 @@ if(isset($_POST["sendMessage"])){
                 <h2>Location</h2> </div>
             <div class="row">
                 <div class="col-md-6 offset-md-3">
-                    <div class="map">
+                    <div class="map animation wow zoomIn">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.5387017332896!2d90.40469681445609!3d23.763823994181433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c77decb5f845%3A0xc2eadd2f3b867792!2sAhsanullah+University+of+Science+and+Technology!5e0!3m2!1sen!2sbd!4v1554212981403!5m2!1sen!2sbd" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                 </div>

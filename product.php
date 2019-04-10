@@ -1,9 +1,19 @@
 <?php
 session_start();
 
+$id = $_GET['id'];
 
+$host = 'localhost';
+$user = 'root';
+$password = '';
+$db = 'shoptech';
+
+$link = mysqli_connect($host, $user, $password, $db);
+
+$sql = 'select * from product where productID="'.$id.'"';
+$result = mysqli_query($link, $sql);
+$row = mysqli_fetch_array($result)
     //echo $_GET['id'];
-
 ?>
 
 
@@ -28,7 +38,7 @@ session_start();
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="logo"> <img src="image/icon/logo.png" class="img-fluid" alt=""> </div>
+                        <div class="logo animation wow zoomIn"> <img src="image/icon/logo.png" class="img-fluid" alt=""> </div>
                     </div>
                     <div class="col-md-8">
                         <div class="menu-area">
@@ -64,23 +74,19 @@ session_start();
             <div class="row no-gutters">
                 <div class="col-md-5">
                     <div class="product-image">
-                        <img src="image/laptop%201.jpg" class="img-fluid" alt="pic">
+                        <img src="<?php echo $row['image'];?>" class="img-fluid" alt="pic">
                     </div>
                 </div>
                 <div class="col-md-7">
                     <div class="product-details">
-                        <h6>NEW</h6>
-                        <h2>Product Name</h2>
-                        <p>Product code: lap102</p>
-                        <h3>USD $500</h3>
-                        <p><b>Availability: </b>In Stock</p>
-                        <p><b>Condition: </b>New</p>
-                        <p><b>Brand: </b>Asus</p>
+                        <h2>Product Name: <?php echo $row['name'];?></h2>
+                        <p>Product ID: <?php echo $row['productID'];?></p>
+                        <h3>TK <?php echo $row['price'];?></h3>
                         <label for="Q"><b>Quantity:</b></label>
                         <input type="number" name="Q" value="1">
-                        <button>Add to chart</button>
+                        <button><a href="cart.php?id=<?php echo $id?>">Add to cart</a></button>
                         <div class="product-desc">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis cumque ipsa qui aspernatur, vero quia praesentium quas eaque fugiat sint magni iusto quam, atque omnis dicta accusamus quidem officiis.</p>
+                            <p><?php echo $row['description'];?></p>
                         </div>
                         
                     </div>

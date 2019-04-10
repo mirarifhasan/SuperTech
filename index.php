@@ -201,10 +201,10 @@ function activeHeader()
                     <h5><?php echo $row['name'] ?></h5>
                     <h6>Price: <?php echo $row['price']; ?></h6>
                     <div class="add">
-                        <button><a href="cart.php">Add to cart</a></button>
+                        <button><a href="cart.php?id=<?php echo $row['productID']; ?>">Add to cart</a></button>
                     </div>
                     <div class="details">
-                        <button><a href="product.php?id=<?php echo $row['productid']; ?>">Details</a></button>
+                        <button><a href="product.php?id=<?php echo $row['productID']; ?>">Details</a></button>
                     </div>
                 </div>
             </div>

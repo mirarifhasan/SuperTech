@@ -208,7 +208,12 @@
       font-size: 12px;
       padding: 5px 10px;
       cursor: pointer;
+    
   }
+.product-area .works-img .product-overlay .add button a{
+      text-decoration: none;
+     color: #fff;
+}
   .product-area .works-img .product-overlay .details button {
       position: absolute;
       bottom: 40px;
@@ -220,6 +225,10 @@
       padding: 5px 10px;
       cursor: pointer;
   }
+.product-area .works-img .product-overlay .details button a{
+     text-decoration: none;
+     color: #fff;
+}
   .filter-button-group {
       padding: 10px 0;
       padding-bottom: 40px;
@@ -907,6 +916,10 @@
 }
 .product-details button:hover{
     background-color: #999999;
+}
+.product-details button a{
+    text-decoration: none;
+     color: #fff;
 }
 .product-desc{}
 .product-desc p{
