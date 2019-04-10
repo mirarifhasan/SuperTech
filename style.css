@@ -561,6 +561,63 @@
   section.sec2 p {
       text-align: justify;
   }
+
+/* My profile-area */
+
+.Profile-area{
+     background: #f4f5f9;
+}
+.my-profile-area{
+   padding-bottom: 40px;
+
+}
+.my-profile{
+    margin-bottom: 40px;
+}
+.my-profile p{
+   padding-top: 10px;
+}
+.table-box
+{
+	width: 800px;
+	height: 400px;
+	overflow-y: scroll;
+	background: #fff;
+   
+	
+}
+.table-box table
+{
+	width: 100%;
+  
+    
+}
+.table-box table, th, td
+{
+	border: 1px solid #202020;
+	border-collapse: collapse;
+	text-align: left;
+}
+.table-box table th
+{
+	position: sticky;
+	top: 0;
+	background:  #E74C3C;
+	color: #fff;
+}
+.table-box table tr th:nth-child(1)
+{
+	width: 60px;
+	text-align: center;
+	background: #DC2913;
+}
+.table-box table tr td:nth-child(1)
+{
+	background: #E74C3C;
+	text-align: center;
+	color: #fff;
+}
+
   /* contact-area */
   .contact {
       background: #f4f5f9;
