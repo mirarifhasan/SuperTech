@@ -26,39 +26,8 @@ $link = mysqli_connect($host, $user, $password, $db);
 
 <body>
 <!-- header-area -->
-<div class="header-area">
-    <div class="header-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="logo"> <img src="image/icon/logo.png" class="img-fluid" alt=""> </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="menu-area">
-                        <div class="menu">
-                            <ul class="nav justify-content-end">
-                                <li><a href="index.php"><b>Home</b></a></li>
-                                <li><a href="about_us.php"><b>About Us</b></a></li>
+<?php include 'nav.php'?>
 
-                                <li><a href="my_profile.php"><b>My Profile</b></a></li>
-                                <li><a href="contact.php"><b>Contact</b></a></li>
-
-                                <?php
-                                if(isset($_SESSION['email'])){
-                                    echo '<li><a href="log_out.php"><button><b>Logout</b></button></a></li>';
-                                }
-                                else{
-                                    echo '<li><a href="log_in.php"><button><b>Login</b></button></a></li>';
-                                }
-                                ?>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- our product-area -->
 <div class="Profile-area">
     <div class="container">
@@ -80,25 +49,29 @@ $link = mysqli_connect($host, $user, $password, $db);
                 <table cellpadding="10">
                     <tr>
                         <th>Sr. No.</th>
+                        <th>Order ID</th>
                         <th>Product Name</th>
-                        <th>Product Quantity</th>
+<!--                        <th>Product Quantity</th>-->
                         <th>Product Price</th>
-
                     </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Laptop</td>
-                        <td>1</td>
-                        <td>$500</td>
 
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Laptop</td>
-                        <td>1</td>
-                        <td>$500</td>
+                    <?php
+                    $sl=1;
+                    $sql = 'select * from ordertable where userID="'.$_SESSION['userID'].'"';
+                    $result = mysqli_query($link, $sql);
 
-                    </tr>
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo '<tr><td>'.$sl.'</td>';
+                        echo '<td>'.$row["orderID"].'</td>';
+                        $sql2 = 'select * from product where productID="'.$row['productID'].'"';
+                        $result2 = mysqli_query($link, $sql2);
+                        $row2 = mysqli_fetch_assoc($result2);
+
+                        echo '<td>'.$row2["name"].'</td>';
+                        echo '<td>TK '.$row2["price"].'</td></tr>';
+                        $sl = $sl + 1;
+                    }
+                    ?>
 
                 </table>
             </div>
@@ -107,12 +80,7 @@ $link = mysqli_connect($host, $user, $password, $db);
 </div>
 
 
-
-
-
-
-
-<div class="arrow-top"> <img src="image/icon/arrow.png" alt=""> </div>
+<div class="arrow-top"><img src="image/icon/top.png" alt=""></div>
 <!-- Link -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>

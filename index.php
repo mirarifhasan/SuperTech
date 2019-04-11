@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-
 $host = 'localhost';
 $user = 'root';
 $password = '';
@@ -9,15 +8,6 @@ $db = 'shoptech';
 
 $link = mysqli_connect($host, $user, $password, $db);
 
-function activeHeader()
-{
-    global $link;
-    $sql = "SELECT img_dir FROM feature WHERE imageID='1'";
-    $result = mysqli_query($link, $sql);
-    while ($row = mysqli_fetch_array($result)) {
-        return ($row['img_dir']);
-    }
-}
 ?>
 
 
@@ -41,58 +31,36 @@ function activeHeader()
 </head>
 
 <body>
+
 <!-- header-area -->
-<header class="header-area">
-    <div class="header-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="logo animation wow zoomIn"><img src="image/icon/logo.png" class="img-fluid" alt="">
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="menu-area">
-                        <div class="menu">
-                            <ul class="nav justify-content-end">
-                                <li><a href="index.php"><b>Home</b></a></li>
-                                <li><a href="about_us.php"><b>About Us</b></a></li>
-                                <li><a href="my_profile.php"><b>My Profile</b></a></li>
-                                <li><a href="contact.php"><b>Contact</b></a></li>
+    <?php include 'nav.php'?>
 
-                                <?php
-                                if (isset($_SESSION['userID'])) {
-                                    echo '<li><a href="log_out.php"><button><b>Logout</b></button></a></li>';
-                                } else {
-                                    echo '<li><a href="log_in.php"><button><b>Login</b></button></a></li>';
-                                }
-                                ?>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="header-bottom">
         <div class="slider">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+
+                    <?php
+                    $sql = "SELECT img_dir FROM feature";
+                    $result = mysqli_query($link, $sql);
+                    $count = mysqli_num_rows($result);
+                    if($count>0)
+                        echo "<li data-target=\"#carouselExampleIndicators\" data-slide-to=\"0\" class=\"active\"></li>";
+
+                    for($i=1; $i<$count; $i = $i+1) {
+                            echo '<li data-target="#carouselExampleIndicators" data-slide-to="'.$i.'"></li>';
+                    }
+                    ?>
                 </ol>
                 <div class="carousel-inner">
                     <?php
                     $sql = "SELECT img_dir FROM feature";
                     $result = mysqli_query($link, $sql);
 
-                    $row = mysqli_fetch_assoc($result);
-                    echo '<div class="carousel-item active"> <img src="' . ($row['img_dir']) . '" class="d-block w-100" alt="0"> </div>';
-
+                    while($row = mysqli_fetch_assoc($result)) {
+                        echo '<div class="carousel-item active"> <img src="' . ($row['img_dir']) . '" class="d-block w-100" alt="0"> </div>';
+                        break;
+                    }
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo '<div class="carousel-item"> <img src="' . ($row['img_dir']) . '" class="d-block w-100" alt="1"> </div>';
                     }
@@ -201,7 +169,7 @@ function activeHeader()
                     <h5><?php echo $row['name'] ?></h5>
                     <h6>Price: <?php echo $row['price']; ?></h6>
                     <div class="add">
-                        <button><a href="cart.php?id=<?php echo $row['productID']; ?>">Add to cart</a></button>
+                        <button><a href="cartintermediate.php?id=<?php echo $row['productID']; ?>">Add to cart</a></button>
                     </div>
                     <div class="details">
                         <button><a href="product.php?id=<?php echo $row['productID']; ?>">Details</a></button>
@@ -227,7 +195,7 @@ function activeHeader()
                                 <h5><?php echo $row['name'] ?></h5>
                                 <h6>Price: <?php echo $row['price'] ?></h6>
                                 <div class="add">
-                                    <button><a href="cart.php?id=<?php echo $row['productID']; ?>">Add to cart</a></button>
+                                    <button><a href="cartintermediate.php?id=<?php echo $row['productID']; ?>">Add to cart</a></button>
                                 </div>
                                 <div class="details">
                                     <button><a href="product.php?id=<?php echo $row['productID']; ?>">Details</a></button>
