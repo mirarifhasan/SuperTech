@@ -2,6 +2,8 @@
 session_start();
 
 $id = $_GET['id'];
+$quantity = 1;
+$_SESSION['quantity'] = $quantity;
 
 $host = 'localhost';
 $user = 'root';
@@ -15,6 +17,14 @@ $result = mysqli_query($link, $sql);
 $count = mysqli_num_rows($result);
 $row = mysqli_fetch_array($result);
     //echo $_GET['id'];
+
+if(isset($_POST["addCart"])){
+    $quantity = $_POST["quan"];
+    $_SESSION['quantity'] = $quantity;
+
+    header('Location: cartintermediate.php?id='.$id);
+}
+
 ?>
 
 
@@ -53,11 +63,16 @@ $row = mysqli_fetch_array($result);
                         <h2>Product Name: <?php echo $row['name'];?></h2>
                         <p>Product ID: <?php echo $row['productID'];?></p>
                         <h3>TK <?php echo $row['price'];?></h3>
-                        <label for="Q"><b>Quantity:</b></label>
-                        <input type="number" name="Q" value="1">
-                        <button><a href="cartintermediate.php?id=<?php echo $id?>">Add to cart</a></button>
+
+                        <form method="post">
+                            <label for="Q"><b>Quantity:</b></label>
+                            <input type="number" id="Q" name="quan" min="1" max="50" placeholder="1" value="<?php echo $quantity?>">
+<!--                            <button><a href="cartintermediate.php?id=--><?php //echo $id?><!--">Add to cart</a></button>-->
+                            <input type="submit" name="addCart" value="Add to cart">
+                        </form>
+
                         <div class="product-desc">
-                            <p><?php echo $row['description'];?></p>
+                            <p><?php echo $row['description']; ?></p>
                         </div>
                         
                     </div>
