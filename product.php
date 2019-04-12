@@ -54,7 +54,7 @@ $row = mysqli_fetch_array($result);
                         <p>Product ID: <?php echo $row['productID'];?></p>
                         <h3>TK <?php echo $row['price'];?></h3>
                         <label for="Q"><b>Quantity:</b></label>
-                        <input type="number" name="Q" value="1">
+                        <input type="number" id="Q" name="Q" min="1" max="5">
                         <button><a href="cartintermediate.php?id=<?php echo $id?>">Add to cart</a></button>
                         <div class="product-desc">
                             <p><?php echo $row['description'];?></p>
