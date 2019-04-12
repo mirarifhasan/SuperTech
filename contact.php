@@ -96,18 +96,8 @@ if(isset($_POST["sendMessage"])){
         </div>
     </div>
     <!-- footer-area -->
-    <section class="footer-area">
-        <div class="container">
-            <div class="icon-area">
-                <ul>
-                   <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    <?php include 'footer.php';?>
+
     <div class="arrow-top"> <img src="image/icon/top.png" alt=""> </div>
     <!-- Link -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

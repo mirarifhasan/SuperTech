@@ -96,6 +96,8 @@ if(isset($_POST["login"])){
                 
         </div>
     </div>
+<!--    footer area-->
+    <?php include 'footer.php';?>
     <div class="arrow-top"> <img src="image/icon/top.png" alt=""> </div>
     
     <!-- Link -->

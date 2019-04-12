@@ -45,14 +45,23 @@ $link = mysqli_connect($host, $user, $password, $db);
                 <p><b>Email: </b><?php echo $row['email']?></p>
                 <p><b>Phone: </b><?php echo $row['phone']?></p>
             </div>
+
+            <?php
+            $sql = 'select * from ordertable where userID="'.$_SESSION['userID'].'"';
+            $result = mysqli_query($link, $sql);
+            $count = mysqli_num_rows($result);
+            if($count>0){
+            ?>
+
             <div class="table-box">
                 <table cellpadding="10">
                     <tr>
                         <th>Sr. No.</th>
                         <th>Order ID</th>
+                        <th>Order Time</th>
                         <th>Product Name</th>
-<!--                        <th>Product Quantity</th>-->
-                        <th>Product Price</th>
+                        <th>Product Quantity</th>
+                        <th>Product Price/Unit</th>
                     </tr>
 
                     <?php
@@ -63,11 +72,14 @@ $link = mysqli_connect($host, $user, $password, $db);
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo '<tr><td>'.$sl.'</td>';
                         echo '<td>'.$row["orderID"].'</td>';
+                        echo '<td>'.$row["datetime"].'</td>';
+
                         $sql2 = 'select * from product where productID="'.$row['productID'].'"';
                         $result2 = mysqli_query($link, $sql2);
                         $row2 = mysqli_fetch_assoc($result2);
-
                         echo '<td>'.$row2["name"].'</td>';
+
+                        echo '<td>'.$row["productQuantity"].'</td>';
                         echo '<td>TK '.$row2["price"].'</td></tr>';
                         $sl = $sl + 1;
                     }
@@ -75,11 +87,16 @@ $link = mysqli_connect($host, $user, $password, $db);
 
                 </table>
             </div>
+
+            <?php } else {?>
+                <h2>Lets start shopping with SuperTech :)</h2>
+            <?php } ?>
         </div>
     </div>
 </div>
 
-
+<!--footer area-->
+<?php include 'footer.php';?>
 <div class="arrow-top"><img src="image/icon/top.png" alt=""></div>
 <!-- Link -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
