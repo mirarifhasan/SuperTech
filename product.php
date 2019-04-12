@@ -12,7 +12,8 @@ $link = mysqli_connect($host, $user, $password, $db);
 
 $sql = 'select * from product where productID="'.$id.'"';
 $result = mysqli_query($link, $sql);
-$row = mysqli_fetch_array($result)
+$count = mysqli_num_rows($result);
+$row = mysqli_fetch_array($result);
     //echo $_GET['id'];
 ?>
 
@@ -36,6 +37,7 @@ $row = mysqli_fetch_array($result)
     <?php include 'nav.php'?>
 
     <!-- our product-area -->
+    <?php if($count>0){ ?>
     <div class="our-products">
         <div class="container">
             <div class="section-title">
@@ -64,8 +66,13 @@ $row = mysqli_fetch_array($result)
         </div>
     </div>
 
+    <?php } else{ ?>
+        <h2>No product found</h2>
+    <?php }?>
 
-    <div class="arrow-top"> <img src="image/icon/arrow.png" alt=""> </div>
+<!--    footer area-->
+    <?php include 'footer.php';?>
+    <div class="arrow-top"> <img src="image/icon/top.png" alt=""> </div>
     <!-- Link -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>

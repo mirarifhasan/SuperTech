@@ -36,28 +36,38 @@ $link = mysqli_connect($host, $user, $password, $db);
             <div class="section-title">
                 <h2>Cart</h2>
             </div>
+
+            <?php
+            $sql = 'select * from cart where userID="'.$_SESSION['userID'].'"';
+            $result = mysqli_query($link, $sql);
+            $count = mysqli_num_rows($result);
+
+            if($count>0){
+            ?>
             <div class="table-box">
                 <table cellpadding="10">
                     <tr>
                         <th>Sr. No.</th>
                         <th>Product Name</th>
-<!--                        <th>Product Quantity</th>-->
-                        <th>Product Price</th>
+                        <th>Product Quantity</th>
+                        <th>Product Price/Unit</th>
                     </tr>
 
                     <?php
                     $sl = 1;
-                    foreach($_SESSION['Cart'] as $key) {
+                    $sql = 'select * from cart where userID="'.$_SESSION['userID'].'"';
+                    $result = mysqli_query($link, $sql);
 
-                        $sql = "select * from product where productID=$key";
+                    while($row = mysqli_fetch_assoc($result)){
+                        $sql = 'select * from product where productID="'.$row['productID'].'"';
                         $run = mysqli_query($link, $sql);
-                        $row = mysqli_fetch_assoc($run);
-
+                        $row2 = mysqli_fetch_assoc($run);
                         echo "<tr><td>$sl</td>";
-                        echo "<td>".$row['name']."</td>";
-//                        echo "<td>1</td>";
-                        echo "<td>".$row['price']."</td>";
+                        echo "<td>".$row2['name']."</td>";
+                        echo "<td>".$row['productQuantity']."</td>";
+                        echo "<td>".$row2['price']."</td>";
                         echo "<td><button>Remove</button></td></tr>";
+
                         $sl = $sl + 1;
                     }
                     ?>
@@ -66,11 +76,19 @@ $link = mysqli_connect($host, $user, $password, $db);
                                 <td>total</td>
                             </tr>
                 </table>
-
             </div>
             <button><a href="checkout.php">Check Out</a></button>
+
+            <?php }
+            else{ ?>
+                <h2>You haven't add any product</h2>
+            <?php }?>
+
         </div>
     </div>
+
+<!--footer area-->
+<?php include 'footer.php';?>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>

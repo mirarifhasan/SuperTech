@@ -41,7 +41,7 @@ $link = mysqli_connect($host, $user, $password, $db);
                 <ol class="carousel-indicators">
 
                     <?php
-                    $sql = "SELECT img_dir FROM feature";
+                    $sql = "SELECT img_dir FROM slidertable";
                     $result = mysqli_query($link, $sql);
                     $count = mysqli_num_rows($result);
                     if($count>0)
@@ -54,13 +54,10 @@ $link = mysqli_connect($host, $user, $password, $db);
                 </ol>
                 <div class="carousel-inner">
                     <?php
-                    $sql = "SELECT img_dir FROM feature";
-                    $result = mysqli_query($link, $sql);
 
-                    while($row = mysqli_fetch_assoc($result)) {
-                        echo '<div class="carousel-item active"> <img src="' . ($row['img_dir']) . '" class="d-block w-100" alt="0"> </div>';
-                        break;
-                    }
+                    $row = mysqli_fetch_assoc($result);
+                    echo '<div class="carousel-item active"> <img src="' . ($row['img_dir']) . '" class="d-block w-100" alt="0"> </div>';
+
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo '<div class="carousel-item"> <img src="' . ($row['img_dir']) . '" class="d-block w-100" alt="1"> </div>';
                     }
@@ -76,56 +73,29 @@ $link = mysqli_connect($host, $user, $password, $db);
         </div>
     </div>
 </header>
+
 <div class="policy-area">
     <div class="container">
         <div class="policy-tag">
             <h2>Our Policy</h2></div>
         <div class="row">
+
+            <?php
+            $sql = "SELECT * FROM policy";
+            $result = mysqli_query($link, $sql);
+            while($row = mysqli_fetch_assoc($result)){
+            ?>
             <div class="col-md-4">
                 <div class="service">
-                    <div class="policy-icon"><img src="image/icon/shipped.png" class="img-fluid" alt="pic"></div>
+                    <div class="policy-icon"><img src="<?php echo $row['image']?>" class="img-fluid" alt="pic"></div>
                     <div class="policy-text">
-                        <h6>Free Shipping</h6>
-                        <p>Free shipping on all us order</p>
+                        <h6><?php echo $row['name']?></h6>
+                        <p><?php echo $row['detail']?></p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="service">
-                    <div class="policy-icon"><img src="image/icon/support.png" class="img-fluid" alt="pic"></div>
-                    <div class="policy-text">
-                        <h6>Support 24/7</h6>
-                        <p>Contact us 24 hours a day</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service">
-                    <div class="policy-icon"><img src="image/icon/transfer.png" class="img-fluid" alt="pic"></div>
-                    <div class="policy-text">
-                        <h6>100% Money Back</h6>
-                        <p>You have 30 days to return</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service">
-                    <div class="policy-icon"><img src="image/icon/return.png" class="img-fluid" alt="pic"></div>
-                    <div class="policy-text">
-                        <h6>90 Days Return</h6>
-                        <p>If goods have problems</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service">
-                    <div class="policy-icon"><img src="image/icon/credit-card.png" class="img-fluid" alt="pic"></div>
-                    <div class="policy-text">
-                        <h6>Payment Secure</h6>
-                        <p>We ensure secure payment</p>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
+
         </div>
     </div>
 </div>
@@ -149,9 +119,7 @@ $link = mysqli_connect($host, $user, $password, $db);
         </div>
     </div>
 
-
     <div class="row grid no-gutters">
-
         <?php
         if (isset($_GET['category'])) {
             $category = $_GET['category'];
@@ -161,8 +129,7 @@ $link = mysqli_connect($host, $user, $password, $db);
             if ($count > 0) {
                 while ($row = mysqli_fetch_assoc($run)) {
         ?>
-
-        <div class="col-md-3 grid-item <?php echo $row['cate<button>Add to cart</button>gory']; ?> animation wow zoomIn">
+        <div class="col-md-3 grid-item <?php echo $row['category']; ?> animation wow zoomIn">
             <div class="works-img">
                 <img src="<?php echo $row['image'] ?>" class="img-fluid" alt="pic">
                 <div class="product-overlay">
@@ -194,9 +161,13 @@ $link = mysqli_connect($host, $user, $password, $db);
                             <div class="product-overlay">
                                 <h5><?php echo $row['name'] ?></h5>
                                 <h6>Price: <?php echo $row['price'] ?></h6>
+
+                                <?php if(isset($_SESSION['userID'])){?>
                                 <div class="add">
                                     <button><a href="cartintermediate.php?id=<?php echo $row['productID']; ?>">Add to cart</a></button>
                                 </div>
+                                <?php }?>
+
                                 <div class="details">
                                     <button><a href="product.php?id=<?php echo $row['productID']; ?>">Details</a></button>
                                 </div>
@@ -237,19 +208,10 @@ $link = mysqli_connect($host, $user, $password, $db);
         </div>
     </div>
 </section>
+
 <!-- footer-area -->
-<section class="footer-area">
-    <div class="container">
-        <div class="icon-area">
-            <ul>
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-        </div>
-    </div>
-</section>
+<?php include 'footer.php';?>
+
 <!-- arrow-top -->
 <div class="arrow-top"><img src="image/icon/top.png" alt=""></div>
 <!-- Link -->
