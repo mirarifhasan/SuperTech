@@ -56,12 +56,15 @@ $link = mysqli_connect($host, $user, $password, $db);
                         echo "<tr><td>$sl</td>";
                         echo "<td>".$row['name']."</td>";
 //                        echo "<td>1</td>";
-                        echo "<td>".$row['price']."</td></tr>";
-
+                        echo "<td>".$row['price']."</td>";
+                        echo "<td><button>Remove</button></td></tr>";
                         $sl = $sl + 1;
                     }
                     ?>
-
+                            <tr>
+                                <td></td>
+                                <td>total</td>
+                            </tr>
                 </table>
 
             </div>

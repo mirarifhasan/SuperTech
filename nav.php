@@ -26,6 +26,7 @@
                                     echo '<li><a href="log_in.php"><button><b>Login</b></button></a></li>';
                                 }
                                 ?>
+                                  <li><a href="cart.php"><i class="fas fa-cart-plus"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -34,3 +35,4 @@
         </div>
     </div>
 </div>
+ 
