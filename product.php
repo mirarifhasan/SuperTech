@@ -55,8 +55,9 @@ if(isset($_POST["addCart"])){
 <?php include 'nav.php'?>
 
 <!-- our product-area -->
-<?php if($count>0){ ?>
-    <div class="our-products">
+
+<div class="our-products">
+    <?php if($count>0){ ?>
         <div class="container">
             <div class="section-title">
                 <h2>Our Product</h2> </div>
@@ -86,11 +87,13 @@ if(isset($_POST["addCart"])){
                 </div>
             </div>
         </div>
-    </div>
+    <?php } else{ ?>
+        <h3>No product found</h3>
+    <?php }?>
 
-<?php } else{ ?>
-    <h2>No product found</h2>
-<?php }?>
+</div>
+
+
 
 <!--    footer area-->
 <?php include 'footer.php';?>

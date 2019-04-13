@@ -3,10 +3,10 @@
     <div class="header-top">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-2">
                     <div class="logo animation wow zoomIn"> <img src="image/icon/logo.png" class="img-fluid" alt=""> </div>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-10">
                     <div class="menu-area">
                         <div class="menu">
                             <ul class="nav justify-content-end">

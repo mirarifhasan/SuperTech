@@ -28,10 +28,13 @@ $link = mysqli_connect($host, $user, $password, $db);
         <?php include 'nav.php'?>
             <!--cart area-->
             <div class="cart-area">
-                
-                    <div class="section-title">
-                        <h2>Cart</h2> </div>
+                <?php if(isset($_SESSION['userID'])){ ?>
+                    <div class="container">
+                        <div class="section-title">
+                            <h2>Cart</h2> </div>
+                    </div>
                     <?php
+
         $sql = 'select * from cart where userID="'.$_SESSION['userID'].'"';
         $result = mysqli_query($link, $sql);
         $count = mysqli_num_rows($result);
@@ -64,33 +67,32 @@ $link = mysqli_connect($host, $user, $password, $db);
                         echo "<td>".$row2['price']."</td>";
 
                         $total = $total + ($row['productQuantity'] * $row2['price']); ?>
-                                   <td>
-                                       <div class="plus-minus">
-                                           <button><a href="#">-</a></button>
-                                          <button><a href="#">+</a></button>
-                                       </div>
-                                   </td> 
+                                    <td>
+                                        <div class="plus-minus">
+                                            <button><a href="#">-</a></button>
+                                            <button><a href="#">+</a></button>
+                                        </div>
+                                    </td>
                                     <td>
                                         <button><a href="cartintermediate.php?id=<?php echo $row['productID']?>&target=remove">Remove</a></button>
                                     </td>
-                                   
-                                 <?php
-                                echo"</tr>";
-                                ?>  
                                     <?php
+                        echo"</tr>";
+                        ?>
+                                        <?php
                         $sl = $sl + 1;
                     }
                     ?>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td><b>Total</b></td>
-                                            <td>
-                                                <?php echo $total?>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td><b>Total</b></td>
+                                                <td>
+                                                    <?php echo $total?>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
                             </table>
                         </div>
                         <div class="chk-btn">
@@ -98,22 +100,30 @@ $link = mysqli_connect($host, $user, $password, $db);
                         </div>
                         <?php }
         else{ ?>
-                            <h3>You haven't add any product</h3>
+                            <div class="container">
+                                <h3>You haven't add any product</h3></div>
                             <?php }?>
-               
+                                <?php }else{ ?>
+                                    <div class="fault">
+                                        <div class="container">
+                                            <h2>Haha! Nice try XD</h2></div>
+                                    </div>
+                                    <?php } ?>
             </div>
-            <!--Link-->
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-            <script src="js/jquery-3.3.1.min.js"></script>
-            <script src="js/isotope.pkgd.min.js"></script>
-            <script src="js/owl.carousel.min.js"></script>
-            <script src="js/wow.min.js"></script>
-            <script src="js/main.js"></script>
-            <script>
-                new WOW().init();
-            </script>
+            <!--footer-area-->
+            <?php include "footer.php";?>
+                <!--Link-->
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+                <script src="js/jquery-3.3.1.min.js"></script>
+                <script src="js/isotope.pkgd.min.js"></script>
+                <script src="js/owl.carousel.min.js"></script>
+                <script src="js/wow.min.js"></script>
+                <script src="js/main.js"></script>
+                <script>
+                    new WOW().init();
+                </script>
     </body>
 
     </html>
