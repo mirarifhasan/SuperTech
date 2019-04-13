@@ -51,6 +51,9 @@ if(isset($_POST["login"])){
 
             $row =  mysqli_fetch_array($result);
             $_SESSION['userID'] = $row['userID'];
+            $_SESSION['name'] = $row['name'];
+            $_SESSION['type'] = $row['type'];
+
             header('Location: index.php');
         }else
             $errorUser = '<h2><label class="text-danger">Wrong input</label></h2>';

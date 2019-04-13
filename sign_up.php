@@ -32,7 +32,7 @@ if(isset($_POST["signup"])){
         $error = '<h2><label class="text-danger">Fill all the fields</label></h2>';
     }
     else{
-        $sql = 'INSERT INTO user (name, email, phone, password) VALUES("'.$name.'", "'.$email.'", "'.$phone.'", "'.$password.'")';
+        $sql = 'INSERT INTO user (name, email, phone, password, type) VALUES("'.$name.'", "'.$email.'", "'.$phone.'", "'.$password.'", "client")';
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $password;
         $resultInsert = mysqli_query($link, $sql);

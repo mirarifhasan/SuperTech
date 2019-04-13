@@ -67,9 +67,9 @@ $link = mysqli_connect($host, $user, $password, $db);
                         echo "<td>".$row2['name']."</td>";
                         echo "<td>".$row['productQuantity']."</td>";
                         echo "<td>".$row2['price']."</td>";
-                        $total = $total + ($row['productQuantity'] * $row2['price']);
-                        echo "<td><button>Remove</button></td></tr>";
-
+                        $total = $total + ($row['productQuantity'] * $row2['price']); ?>
+                        <td><button><a href="cartintermediate.php?id=<?php echo $row['productID']?>&target=remove">Remove</a></button></td></tr>
+                    <?php
                         $sl = $sl + 1;
                     }
                     ?>

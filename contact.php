@@ -12,6 +12,10 @@ $email = '';
 $subject = '';
 $message = '';
 
+if(isset($_SESSION['userID'])){
+    $name = $_SESSION['name'];
+    $email = $_SESSION['email'];
+}
 
 if(isset($_POST["sendMessage"])){
 

@@ -984,7 +984,13 @@
     padding-top: 30px;
     
 }
-
+.indexerror{
+    margin-bottom: 40px;
+}
+.indexerror p{
+    font-size: 30px;
+    color: #999999;
+}
 /* cart-area */
 .cart-area{}
  

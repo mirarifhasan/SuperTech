@@ -23,7 +23,7 @@ if(isset($_POST["addCart"])){
         $quantity = $_POST["quan"];
         $_SESSION['quantity'] = $quantity;
 
-        header('Location: cartintermediate.php?id='.$id);
+        header('Location: cartintermediate.php?id='.$id.'&target=add');
     }else{
         echo "<script type='text/javascript'>alert('Login First!')</script>";
     }
@@ -71,7 +71,6 @@ if(isset($_POST["addCart"])){
                         <form method="post">
                             <label for="Q"><b>Quantity:</b></label>
                             <input type="number" id="Q" name="quan" min="1" max="50" placeholder="1" value="<?php echo $quantity?>">
-                            <!--                            <button><a href="cartintermediate.php?id=--><?php //echo $id?><!--">Add to cart</a></button>-->
                             <input type="submit" name="addCart" value="Add to cart">
                         </form>
 

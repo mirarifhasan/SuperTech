@@ -16,7 +16,15 @@
                                 <?php
                                 if(isset($_SESSION['email'])){
                                     echo '<li><a href="my_profile.php"><b>My Profile</b></a></li>';
-                                }?>
+                                }
+                                if(isset($_SESSION['type'])){
+                                    if($_SESSION['type']=='admin'){
+                                        echo '<li><a href="admin.php"><b>Admin</b></a></li>';
+                                    }
+                                }
+
+                                ?>
+
                                 <li><a href="contact.php"><b>Contact</b></a></li>
 
                                 <?php
