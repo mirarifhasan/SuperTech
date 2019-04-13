@@ -107,7 +107,7 @@ $link = mysqli_connect($host, $user, $password, $db);
             <button><a href="/SuperTech">All</a></button>
             <button><a href="/SuperTech/?category=laptop">Laptop</a></button>
             <button><a href="/SuperTech/?category=androidmobile">Android Mobile</a></button>
-            <button data-filter=".watch"><a href="/SuperTech/?category=watch">Watch</a></button>
+            <button><a href="/SuperTech/?category=watch">Watch</a></button>
             <button><a href="/SuperTech/?category=smarttelevision">Smart Television</a></button>
             <button><a href="/SuperTech/?category=headphone">Headphone</a></button>
             <button><a href="/SuperTech/?category=others">Others</a></button>
