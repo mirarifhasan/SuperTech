@@ -71,7 +71,7 @@ $link = mysqli_connect($host, $user, $password, $db);
             </div>
         </div>
     </div>
-</header>
+<!-- policy-area -->
 
 <div class="policy-area">
     <div class="container">
@@ -157,6 +157,54 @@ $link = mysqli_connect($host, $user, $password, $db);
 
     </div>
 </section>
+<!-- slider-area -->
+ <section class="slider">
+        <div class="container">
+            <div class="owl-carousel owl-theme">
+                <div id="item">
+                    <img src="image/laptop1.jpg" alt="slide" class="img-fluid">
+                    <button><a href="#">Add to cart</a></button>
+                    <button><a href="#">Details</a></button>
+                 </div>
+             <div id="item">
+                    <img src="image/laptop1.jpg" alt="slide" class="img-fluid">
+                     <button><a href="#">Add to cart</a></button>
+                    <button><a href="#">Details</a></button>
+                 </div>
+                 <div id="item">
+                    <img src="image/laptop1.jpg" alt="slide" class="img-fluid">
+                     <button><a href="#">Add to cart</a></button>
+                    <button><a href="#">Details</a></button>
+                 </div>
+                 <div id="item">
+                    <img src="image/laptop1.jpg" alt="slide" class="img-fluid">
+                     <button><a href="#">Add to cart</a></button>
+                    <button><a href="#">Details</a></button>
+                 </div>
+                 <div id="item">
+                    <img src="image/laptop1.jpg" alt="slide" class="img-fluid">
+                    <button><a href="#">Add to cart</a></button>
+                    <button><a href="#">Details</a></button>
+                 </div>
+                 <div id="item">
+                    <img src="image/laptop1.jpg" alt="slide" class="img-fluid">
+                     <button><a href="#">Add to cart</a></button>
+                    <button><a href="#">Details</a></button>
+                 </div>
+                 <div id="item">
+                    <img src="image/laptop1.jpg" alt="slide" class="img-fluid">
+                     <button><a href="#">Add to cart</a></button>
+                    <button><a href="#">Details</a></button>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
 
 <!-- review-area -->
 <div class="review-area">

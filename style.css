@@ -1103,22 +1103,14 @@
       background: #f4f5f9;
   }
 
-  .cart-area.table-bx table,
-  th,
-  td {
+  .cart-area.table-bx table tr,th{
       border: none;
-      padding: 10px 20px;
+      padding: 10px 40px;
   }
-.cart-area .table-bx table,
-  tr,
-  td {
-      border: none;
-      padding: 10px 20px;
-  }
-  
-  
+
   .cart-area .table-bx table tr:nth-child(odd) {
       background-color: #fff;
+      padding: 0px 0px;
   }
   
   .cart-area .table-bx table tr:nth-child(even) {
@@ -1128,7 +1120,7 @@
     display: flex;
 }
 .plus-minus button{
-    margin-left: 5px;
+    margin-left: 15px;
 }
   .cart-area .table-bx table tr td button {
       background-color: #E74C3C;
@@ -1151,7 +1143,7 @@
   }
   .cart-area .chk-btn button{
       margin-bottom: 30px;
-      margin-left: 920px;
+      margin-left: 1190px;
       margin-top: 30px;
       background-color: #E74C3C;
       color: #fff;
