@@ -44,13 +44,14 @@ $link = mysqli_connect($host, $user, $password, $db);
 
         if($count>0){
             ?>
-            <div class="table-box">
-                <table cellpadding="10">
+            <div class="table-bx">
+                <table cellpadding="8">
                     <tr>
                         <th>Sr. No.</th>
                         <th>Product Name</th>
                         <th>Product Quantity</th>
                         <th>Product Price/Unit</th>
+                        <th></th>
                     </tr>
 
                     <?php
@@ -67,32 +68,36 @@ $link = mysqli_connect($host, $user, $password, $db);
                         echo "<td>".$row2['name']."</td>";
                         echo "<td>".$row['productQuantity']."</td>";
                         echo "<td>".$row2['price']."</td>";
+
                         $total = $total + ($row['productQuantity'] * $row2['price']); ?>
                         <td><button><a href="cartintermediate.php?id=<?php echo $row['productID']?>&target=remove">Remove</a></button></td></tr>
                     <?php
                         $sl = $sl + 1;
                     }
                     ?>
+
                     <tr>
                         <td></td>
                         <td></td>
                         <td><b>Total</b></td>
                         <td><?php echo $total?></td>
                     </tr>
+                    
                 </table>
             </div>
-            <button><a href="checkout.php">Check Out</a></button>
+           <div class="chk-btn"> <button><a href="checkout.php">Check Out</a></button></div>
+
 
         <?php }
         else{ ?>
-            <h2>You haven't add any product</h2>
+            <h3>You haven't add any product</h3>
         <?php }?>
 
     </div>
 </div>
 
-<!--footer area-->
-<?php include 'footer.php';?>
+<!--Link-->
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>

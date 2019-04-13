@@ -19,11 +19,15 @@ $row = mysqli_fetch_array($result);
 //echo $_GET['id'];
 
 if(isset($_POST["addCart"])){
-    if(isset($_POST["userID"])){
-        $quantity = $_POST["quan"];
-        $_SESSION['quantity'] = $quantity;
+    if(isset($_SESSION["userID"])){
+        if(!empty($_POST["quan"])){
+            $quantity = $_POST["quan"];
+            $_SESSION['quantity'] = $quantity;
 
-        header('Location: cartintermediate.php?id='.$id.'&target=add');
+            header('Location: cartintermediate.php?id='.$id.'&target=add');
+        }else{
+            echo "<script type='text/javascript'>alert('Insert the quantity please!')</script>";
+        }
     }else{
         echo "<script type='text/javascript'>alert('Login First!')</script>";
     }
@@ -70,7 +74,7 @@ if(isset($_POST["addCart"])){
 
                         <form method="post">
                             <label for="Q"><b>Quantity:</b></label>
-                            <input type="number" id="Q" name="quan" min="1" max="50" placeholder="1" value="<?php echo $quantity?>">
+                            <input type="number" id="Q" name="quan" min="1" max="50" value="<?php echo $quantity?>">
                             <input type="submit" name="addCart" value="Add to cart">
                         </form>
 

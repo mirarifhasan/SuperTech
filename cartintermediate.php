@@ -1,7 +1,9 @@
 <?php
 session_start();
 
-$_SESSION['quantity'] = 1;
+if(!isset($_SESSION['quantity']))
+    $_SESSION['quantity'] = 1;
+
 //$_SESSION['Cart'][] = $_GET['id'];
 //$_SESSION['Cart'][0];
 
@@ -30,7 +32,9 @@ if($_GET['target']=='add'){
         $sql = 'update cart set productQuantity="'.$row['productQuantity'].'" where userID="'.$_SESSION['userID'].'" and productID="'.$_GET['id'].'"';
         $resultInsert = mysqli_query($link, $sql);
     }
-}else if($_GET['target']=='remove'){
+}
+
+else if($_GET['target']=='remove'){
 
     $sql = 'delete from cart where userID="'.$_SESSION['userID'].'" and productID="'.$_GET['id'].'"';
     $resultInsert = mysqli_query($link, $sql);
