@@ -31,6 +31,7 @@ $link = mysqli_connect($host, $user, $password, $db);
 <!-- our product-area -->
 <div class="Profile-area">
     <div class="container">
+        <?php if(isset($_SESSION['userID'])){ ?>
         <div class="section-title">
             <h2>My Profile</h2>
         </div>
@@ -92,6 +93,11 @@ $link = mysqli_connect($host, $user, $password, $db);
                 <h2>Lets start shopping with SuperTech :)</h2>
             <?php } ?>
         </div>
+        <?php } else {?>
+            <div class="fault">
+                <h2>Haha! Nice try XD</h2>
+            </div>
+        <?php } ?>
     </div>
 </div>
 
