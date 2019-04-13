@@ -2,6 +2,8 @@
 session_start();
 
 $id = $_GET['id'];
+$quantity = 1;
+$_SESSION['quantity'] = $quantity;
 
 $host = 'localhost';
 $user = 'root';
@@ -14,7 +16,19 @@ $sql = 'select * from product where productID="'.$id.'"';
 $result = mysqli_query($link, $sql);
 $count = mysqli_num_rows($result);
 $row = mysqli_fetch_array($result);
-    //echo $_GET['id'];
+//echo $_GET['id'];
+
+if(isset($_POST["addCart"])){
+    if(isset($_POST["userID"])){
+        $quantity = $_POST["quan"];
+        $_SESSION['quantity'] = $quantity;
+
+        header('Location: cartintermediate.php?id='.$id);
+    }else{
+        echo "<script type='text/javascript'>alert('Login First!')</script>";
+    }
+}
+
 ?>
 
 
@@ -33,11 +47,11 @@ $row = mysqli_fetch_array($result);
     <link rel="stylesheet" href="css/animate.min.css"> </head>
 
 <body>
-    <!-- header-area -->
-    <?php include 'nav.php'?>
+<!-- header-area -->
+<?php include 'nav.php'?>
 
-    <!-- our product-area -->
-    <?php if($count>0){ ?>
+<!-- our product-area -->
+<?php if($count>0){ ?>
     <div class="our-products">
         <div class="container">
             <div class="section-title">
@@ -53,38 +67,43 @@ $row = mysqli_fetch_array($result);
                         <h2>Product Name: <?php echo $row['name'];?></h2>
                         <p>Product ID: <?php echo $row['productID'];?></p>
                         <h3>TK <?php echo $row['price'];?></h3>
-                        <label for="Q"><b>Quantity:</b></label>
-                        <input type="number" id="Q" name="Q" min="1" max="5">
-                        <button><a href="cartintermediate.php?id=<?php echo $id?>">Add to cart</a></button>
+
+                        <form method="post">
+                            <label for="Q"><b>Quantity:</b></label>
+                            <input type="number" id="Q" name="quan" min="1" max="50" placeholder="1" value="<?php echo $quantity?>">
+                            <!--                            <button><a href="cartintermediate.php?id=--><?php //echo $id?><!--">Add to cart</a></button>-->
+                            <input type="submit" name="addCart" value="Add to cart">
+                        </form>
+
                         <div class="product-desc">
-                            <p><?php echo $row['description'];?></p>
+                            <p><?php echo $row['description']; ?></p>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <?php } else{ ?>
-        <h2>No product found</h2>
-    <?php }?>
+<?php } else{ ?>
+    <h2>No product found</h2>
+<?php }?>
 
 <!--    footer area-->
-    <?php include 'footer.php';?>
-    <div class="arrow-top"> <img src="image/icon/top.png" alt=""> </div>
-    <!-- Link -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-        new WOW().init();
-    </script>
+<?php include 'footer.php';?>
+<div class="arrow-top"> <img src="image/icon/top.png" alt=""> </div>
+<!-- Link -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    new WOW().init();
+</script>
 </body>
 
 </html>

@@ -36,6 +36,12 @@ if(isset($_POST["signup"])){
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $password;
         $resultInsert = mysqli_query($link, $sql);
+
+        $sql = 'select userID from user where email="'.$email.'"';
+        $result = mysqli_query($link, $sql);
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['userID'] = $row['userID'];
+
         header('Location: index.php');
     }
 }
