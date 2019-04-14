@@ -32,7 +32,7 @@ $link = mysqli_connect($host, $user, $password, $db);
         <h2>Our Product</h2>
         <div class="button-group filter-button-group">
 
-            <button><a href="/SuperTech">All</a></button>
+            <button><a href="/SuperTech/shop.php">All</a></button>
             <button><a href="/SuperTech/shop.php?category=laptop">Laptop</a></button>
             <button><a href="/SuperTech/shop.php?category=androidmobile">Android Mobile</a></button>
             <button><a href="/SuperTech/shop.php?category=watch">Watch</a></button>

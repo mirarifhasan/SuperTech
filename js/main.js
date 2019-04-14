@@ -18,7 +18,29 @@
         $('.filter-button-group button').removeClass('active');
         $(this).addClass('active');
     })
-   
+    
+    
+    $('.owl-carousel').owlCarousel({
+        loop: true
+        , margin: 10
+        , autoplay: true
+        , autoplayTimeout: 2000
+        , responsive: {
+            0: {
+                items: 1
+            }
+            , 600: {
+                items: 3
+            }
+            , 1000: {
+                items: 4
+            }
+        }
+    })
+    
+    
+    
+    
     $(window).scroll(function () {
         var scrolling = $(window).scrollTop();
         if (scrolling > 200) {

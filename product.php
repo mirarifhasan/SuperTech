@@ -75,7 +75,7 @@ if(isset($_POST["addCart"])){
 
                         <form method="post">
                             <label for="Q"><b>Quantity:</b></label>
-                            <input type="number" id="Q" name="quan" min="1" max="50" value="<?php echo $quantity?>">
+                            <input type="number" id="Q" name="quan" value="<?php echo $quantity?>">
                             <input type="submit" name="addCart" value="Add to cart">
                         </form>
 
