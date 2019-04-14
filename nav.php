@@ -11,7 +11,6 @@
                         <div class="menu">
                             <ul class="nav justify-content-end">
                                 <li><a href="index.php"><b>Home</b></a></li>
-                                <li><a href="about_us.php"><b>About Us</b></a></li>
                                 <li><a href="shop.php"><b>Shop</b></a></li>
 
                                 <?php
@@ -26,6 +25,7 @@
 
                                 ?>
 
+                                <li><a href="about_us.php"><b>About Us</b></a></li>
                                 <li><a href="contact.php"><b>Contact</b></a></li>
 
                                 <?php

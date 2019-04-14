@@ -14,14 +14,14 @@ $errorEmail=''; $errorPassword = ''; $errorUser='';
 
 function clean_text($string)
 {
-     $string = trim($string);
-     $string = stripslashes($string);
-     $string = htmlspecialchars($string);
-     return $string;
+    $string = trim($string);
+    $string = stripslashes($string);
+    $string = htmlspecialchars($string);
+    return $string;
 }
 
 if(isset($_POST["login"])){
-    
+
     if(empty($_POST["email"])){
         $errorEmail .= '<h2><label class="text-danger">Email is required</label></h2>';
     }
@@ -32,7 +32,7 @@ if(isset($_POST["login"])){
             $errorEmail .= '<h2><label class="text-danger">Invalid email format</label></h2>';
         }
     }
-    
+
     if(empty($_POST["password"])){
         $errorPassword .= '<h2><label class="text-danger">Password is required</label></h2>';
     }
@@ -77,44 +77,44 @@ if(isset($_POST["login"])){
     <link rel="stylesheet" href="css/animate.min.css"> </head>
 
 <body>
-    <!-- header-area -->
-    <?php include 'nav.php'?>
+<!-- header-area -->
+<?php include 'nav.php'?>
 
-    <!-- login-area -->
-    <div class="login-area">
-        <div class="loginbox"> <img src="image/icon/001.jpg" alt="pic">
-            <h1>Login Here</h1>
-            <form method="post">
-                <p>Email</p>
-                <input type="text" name="email" placeholder="Enter Email" value="<?php echo $email; ?>">
-                <?php echo $errorEmail; ?>
-                
-                <p>Password</p>
-                <input type="password" name="password" placeholder="Enter Password" value="<?php echo $password; ?>">
-                <?php echo $errorPassword; ?>
-                
-                <input type="submit" name="login" value="Login">
-                <?php echo $errorUser; ?>
-                <a href="sign_up.php">Don't have an account?</a> </form>
-                
-        </div>
+<!-- login-area -->
+<div class="login-area">
+    <div class="loginbox"> <img src="image/icon/001.jpg" alt="pic">
+        <h1>Login Here</h1>
+        <form method="post">
+            <p>Email</p>
+            <input type="text" name="email" placeholder="Enter Email" value="<?php echo $email; ?>">
+            <?php echo $errorEmail; ?>
+
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password" value="<?php echo $password; ?>">
+            <?php echo $errorPassword; ?>
+
+            <input type="submit" name="login" value="Login">
+            <?php echo $errorUser; ?>
+            <a href="sign_up.php">Don't have an account?</a> </form>
+
     </div>
+</div>
 <!--    footer area-->
-    <?php include 'footer.php';?>
-    <div class="arrow-top"> <img src="image/icon/top.png" alt=""> </div>
-    
-    <!-- Link -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-        new WOW().init();
-    </script>
+<?php include 'footer.php';?>
+<div class="arrow-top"> <img src="image/icon/top.png" alt=""> </div>
+
+<!-- Link -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    new WOW().init();
+</script>
 </body>
 
 </html>

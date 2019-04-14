@@ -1,0 +1,5 @@
+1. Create a database name 'shoptech' in xampp (localhost/phpmyadmin)
+
+2. Import this database in that created xampp database
+
+Good luck
