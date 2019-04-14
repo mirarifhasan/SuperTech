@@ -33,44 +33,44 @@ $link = mysqli_connect($host, $user, $password, $db);
 <body>
 
 <!-- header-area -->
-    <?php include 'nav.php'?>
+<?php include 'nav.php'?>
 
-    <div class="header-bottom">
-        <div class="slider">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <?php
-                    $sql = "SELECT img_dir FROM slidertable";
-                    $result = mysqli_query($link, $sql);
-                    $count = mysqli_num_rows($result);
-                    if($count>0)
-                        echo "<li data-target=\"#carouselExampleIndicators\" data-slide-to=\"0\" class=\"active\"></li>";
+<div class="header-bottom">
+    <div class="slider">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <?php
+                $sql = "SELECT img_dir FROM slidertable";
+                $result = mysqli_query($link, $sql);
+                $count = mysqli_num_rows($result);
+                if($count>0)
+                    echo "<li data-target=\"#carouselExampleIndicators\" data-slide-to=\"0\" class=\"active\"></li>";
 
-                    for($i=1; $i<$count; $i = $i+1) {
-                            echo '<li data-target="#carouselExampleIndicators" data-slide-to="'.$i.'"></li>';
-                    }
-                    ?>
-                </ol>
-                <div class="carousel-inner">
-                    <?php
+                for($i=1; $i<$count; $i = $i+1) {
+                    echo '<li data-target="#carouselExampleIndicators" data-slide-to="'.$i.'"></li>';
+                }
+                ?>
+            </ol>
+            <div class="carousel-inner">
+                <?php
 
-                    $row = mysqli_fetch_assoc($result);
-                    echo '<div class="carousel-item active"> <img src="' . ($row['img_dir']) . '" class="d-block w-100" alt="0"> </div>';
+                $row = mysqli_fetch_assoc($result);
+                echo '<div class="carousel-item active"> <img src="' . ($row['img_dir']) . '" class="d-block w-100" alt="0"> </div>';
 
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        echo '<div class="carousel-item"> <img src="' . ($row['img_dir']) . '" class="d-block w-100" alt="1"> </div>';
-                    }
-                    ?>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span
-                            class="sr-only">Previous</span> </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span> <span
-                            class="sr-only">Next</span> </a>
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo '<div class="carousel-item"> <img src="' . ($row['img_dir']) . '" class="d-block w-100" alt="1"> </div>';
+                }
+                ?>
             </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+                        class="sr-only">Previous</span> </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span> <span
+                        class="sr-only">Next</span> </a>
         </div>
     </div>
+</div>
 <!-- policy-area -->
 
 <div class="policy-area">
@@ -83,122 +83,64 @@ $link = mysqli_connect($host, $user, $password, $db);
             $sql = "SELECT * FROM policy";
             $result = mysqli_query($link, $sql);
             while($row = mysqli_fetch_assoc($result)){
-            ?>
-            <div class="col-md-4">
-                <div class="service">
-                    <div class="policy-icon"><img src="<?php echo $row['image']?>" class="img-fluid" alt="pic"></div>
-                    <div class="policy-text">
-                        <h6><?php echo $row['name']?></h6>
-                        <p><?php echo $row['detail']?></p>
+                ?>
+                <div class="col-md-4">
+                    <div class="service">
+                        <div class="policy-icon"><img src="<?php echo $row['image']?>" class="img-fluid" alt="pic"></div>
+                        <div class="policy-text">
+                            <h6><?php echo $row['name']?></h6>
+                            <p><?php echo $row['detail']?></p>
+                        </div>
                     </div>
                 </div>
-            </div>
             <?php } ?>
 
         </div>
     </div>
 </div>
-<!-- product-area -->
-<section class="product-area">
+
+<!-- slider-area -->
+<section class="slider">
     <div class="container">
-        <h2>Our Product</h2>
-        <div class="button-group filter-button-group">
-
-            <button><a href="/SuperTech">All</a></button>
-            <button><a href="/SuperTech/?category=laptop">Laptop</a></button>
-            <button><a href="/SuperTech/?category=androidmobile">Android Mobile</a></button>
-            <button><a href="/SuperTech/?category=watch">Watch</a></button>
-            <button><a href="/SuperTech/?category=smarttelevision">Smart Television</a></button>
-            <button><a href="/SuperTech/?category=headphone">Headphone</a></button>
-            <button><a href="/SuperTech/?category=others">Others</a></button>
-
-            <?php
-            //var_dump($_GET);die();
-            ?>
-        </div>
-    </div>
-
-    <div class="row grid no-gutters">
-        <?php
-            $sql = '';
-            if (isset($_GET['category'])) {
-                $category = $_GET['category'];
-                $sql = "select * from product where category = '{$category}'";
-            }else{
-                $sql = "select * from product";}
-
-            $run = mysqli_query($link, $sql);
-            $count = mysqli_num_rows($run);
-            if ($count > 0) {
-                while ($row = mysqli_fetch_assoc($run)) {
-        ?>
-        <div class="col-md-3 grid-item <?php echo $row['category']; ?> animation wow zoomIn">
-            <div class="works-img">
-                <img src="<?php echo $row['image'] ?>" class="img-fluid" alt="pic">
-                <div class="product-overlay">
-                    <h5><?php echo $row['name'] ?></h5>
-                    <h6>Price: <?php echo $row['price']; ?></h6>
-                    <div class="add">
-                        <?php if(isset($_SESSION['userID'])){?>
-                        <button><a href="cartintermediate.php?id=<?php echo $row['productID']; ?>&target=add">Add to cart</a></button>
-                        <?php }?>
-                    </div>
-                    <div class="details">
-                        <button><a href="product.php?id=<?php echo $row['productID']; ?>">Details</a></button>
-                    </div>
-                </div>
+        <div class="owl-carousel owl-theme">
+            <div id="item">
+                <img src="image/laptop1.jpg" alt="slide" class="img-fluid">
+                <button><a href="#">Add to cart</a></button>
+                <button><a href="#">Details</a></button>
+            </div>
+            <div id="item">
+                <img src="image/laptop1.jpg" alt="slide" class="img-fluid">
+                <button><a href="#">Add to cart</a></button>
+                <button><a href="#">Details</a></button>
+            </div>
+            <div id="item">
+                <img src="image/laptop1.jpg" alt="slide" class="img-fluid">
+                <button><a href="#">Add to cart</a></button>
+                <button><a href="#">Details</a></button>
+            </div>
+            <div id="item">
+                <img src="image/laptop1.jpg" alt="slide" class="img-fluid">
+                <button><a href="#">Add to cart</a></button>
+                <button><a href="#">Details</a></button>
+            </div>
+            <div id="item">
+                <img src="image/laptop1.jpg" alt="slide" class="img-fluid">
+                <button><a href="#">Add to cart</a></button>
+                <button><a href="#">Details</a></button>
+            </div>
+            <div id="item">
+                <img src="image/laptop1.jpg" alt="slide" class="img-fluid">
+                <button><a href="#">Add to cart</a></button>
+                <button><a href="#">Details</a></button>
+            </div>
+            <div id="item">
+                <img src="image/laptop1.jpg" alt="slide" class="img-fluid">
+                <button><a href="#">Add to cart</a></button>
+                <button><a href="#">Details</a></button>
             </div>
         </div>
-            <?php
-                }
-            } else{ ?>
-                <div class="grid-item"><div class="indexerror"><p>There is no product to show</p></div></div>
-        <?php } ?>
-
     </div>
 </section>
-<!-- slider-area -->
- <section class="slider">
-        <div class="container">
-            <div class="owl-carousel owl-theme">
-                <div id="item">
-                    <img src="image/laptop1.jpg" alt="slide" class="img-fluid">
-                    <button><a href="#">Add to cart</a></button>
-                    <button><a href="#">Details</a></button>
-                 </div>
-             <div id="item">
-                    <img src="image/laptop1.jpg" alt="slide" class="img-fluid">
-                     <button><a href="#">Add to cart</a></button>
-                    <button><a href="#">Details</a></button>
-                 </div>
-                 <div id="item">
-                    <img src="image/laptop1.jpg" alt="slide" class="img-fluid">
-                     <button><a href="#">Add to cart</a></button>
-                    <button><a href="#">Details</a></button>
-                 </div>
-                 <div id="item">
-                    <img src="image/laptop1.jpg" alt="slide" class="img-fluid">
-                     <button><a href="#">Add to cart</a></button>
-                    <button><a href="#">Details</a></button>
-                 </div>
-                 <div id="item">
-                    <img src="image/laptop1.jpg" alt="slide" class="img-fluid">
-                    <button><a href="#">Add to cart</a></button>
-                    <button><a href="#">Details</a></button>
-                 </div>
-                 <div id="item">
-                    <img src="image/laptop1.jpg" alt="slide" class="img-fluid">
-                     <button><a href="#">Add to cart</a></button>
-                    <button><a href="#">Details</a></button>
-                 </div>
-                 <div id="item">
-                    <img src="image/laptop1.jpg" alt="slide" class="img-fluid">
-                     <button><a href="#">Add to cart</a></button>
-                    <button><a href="#">Details</a></button>
-                 </div>
-            </div>
-        </div>
-    </section>
 
 
 

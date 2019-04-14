@@ -26,6 +26,7 @@ $link = mysqli_connect($host, $user, $password, $db);
 <body>
 <!-- header-area -->
 <?php include 'nav.php'?>
+
 <!--cart area-->
 <div class="cart-area">
     <?php if(isset($_SESSION['userID'])){ ?>
