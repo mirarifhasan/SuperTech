@@ -69,6 +69,8 @@ $link = mysqli_connect($host, $user, $password, $db);
                             <div class="add">
                                 <?php if(isset($_SESSION['userID'])){?>
                                     <button><a href="cartintermediate.php?id=<?php echo $row['productID']; ?>&target=add">Add to cart</a></button>
+                                <?php }else{?>
+                                    <button type="button" name="addcart" title="Add to Cart" onclick="alert('Login to continue')">Add to cart</button>
                                 <?php }?>
                             </div>
                             <div class="details">

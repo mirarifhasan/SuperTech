@@ -104,6 +104,8 @@ $link = mysqli_connect($host, $user, $password, $db);
                         <div class="hot-overlay">
                             <?php if(isset($_SESSION['userID'])){ ?>
                                 <button type="button" name="addcart" title="Add to Cart"><a href="cartintermediate.php?id=<?php echo $row2['productID']; ?>&target=add"><i class="fas fa-shopping-cart"></i></a></button>
+                            <?php }else{?>
+                                <button type="button" name="addcart" title="Add to Cart" onclick="alert('Login to continue')"><i class="fas fa-shopping-cart"></i></button>
                             <?php }?>
                             <button type="button" title="Details"><a href="product.php?id=<?php echo $row2['productID']; ?>"><i class="fas fa-eye"></i></a></button>
                         </div>
@@ -139,6 +141,8 @@ $link = mysqli_connect($host, $user, $password, $db);
                 <div id="item"> <img src="<?php echo $row2['image'];?>" alt="slide" class="img-fluid">
                     <?php if(isset($_SESSION['userID'])){ ?>
                         <button><a href="cartintermediate.php?id=<?php echo $row2['productID']; ?>&target=add">Add to cart</a></button>&nbsp;&nbsp;&nbsp;
+                    <?php } else{?>
+                        <button type="button" name="addcart" title="Add to Cart" onclick="alert('Login to continue')">Add to cart</button>
                     <?php }?>
                     <button><a href="product.php?id=<?php echo $row2['productID']; ?>"">Details</a></button>
                 </div>
