@@ -1238,6 +1238,12 @@ input[type="number"] {
     background: #f4f5f9;
 }
 
+.cart-area .table-bx table {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .cart-area .table-bx table tr,
 th {
     border: none;
